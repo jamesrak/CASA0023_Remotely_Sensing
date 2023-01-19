@@ -1,0 +1,87 @@
+# An Introduction to Remote Sensing
+
+1.  Sensor
+
+    1.   Passive
+
+        1.  Use energy that is available
+
+        2.  Usually detecting reflected energy from the sun
+
+        3.  e.g. Human eye, camera, satellite sensor
+
+    2.  Active
+
+        1.  Have an energy source for illumination
+
+        2.  See through clouds
+
+        3.  e.g. Radar, X-ray, LiDAR
+
+2.  Electromagnetic waves
+
+    1.  Electromagnetic radiation (EMR) = Wave carry energy over time
+
+    2.  Energy carried by EMR waves = radiant energy
+
+    3.  Energy per unit of time = radiant flux
+
+    4.  Energy from the sun = incoming shortwave radiation or shortwave radiation
+
+    5.  Atmospheric Correction;
+
+        1.  to remove atmosphere like cloud
+
+        2.  Big issue to deal with
+
+            1.  Programming; detect cloud and estimate by other pictures
+
+            2.  Using active sensors like Synthetic Aperture Radar (SAR) to see through clouds, but the issue is about the accuracy of the outputs
+
+                1.  emit the signal by polarization (single/dual)
+
+                2.  HH = emitted in horizontal (H) and received in horizontal (H)
+
+    6.  Color
+
+        1.  Sky is blue; Sunlight is scattered by small wavelengths
+
+        2.  Moon sky is black; no atmosphere
+
+        3.  Ocean is blue; water absorb wavelength
+
+3.  Data
+
+    1.  Format - Raster
+
+        1.  common file types: BIL, BSQ, BIP, GeoTIFF
+
+    2.  Resolutions
+
+        1.  Spatial: range between 10 cm and several km
+
+            1.  (e.g. 20cm or 30m)
+
+        2.  Spectral: the number of bands it records data
+
+            1.  spectral signature - creating from values for each wavelength across the electromagnetic spectrum
+
+        3.  Temporal = the time it revisits
+
+            1.  e.g. daily, every 7 days, on demand
+
+        4.  Radiometric = identify differences in light or reflectance
+
+            1.  e.g an 8 bit sensor has values between 0 and 255 (256 possible values), an 11 bit sensor has values between 0 and 2047
+
+    3.  Color
+
+        1.  True color: human can see e.g. red, blue, green
+
+        2.  False color: including many bands human can\'t see
+
+    4.  Satellite imagery
+
+        1.  MODIS - 500 m
+
+        2.  Landsat - 30 cm
