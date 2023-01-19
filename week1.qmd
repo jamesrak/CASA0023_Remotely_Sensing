@@ -2,7 +2,9 @@
 
 1.  Sensor
 
-    1.   Passive
+    1.  Passive
+
+    <!-- -->
 
         1.  Use energy that is available
 
@@ -78,7 +80,7 @@
 
         1.  True color: human can see e.g. red, blue, green
 
-        2.  False color: including many bands human can\'t see
+        2.  False color: including many bands human can't see
 
     4.  Satellite imagery
 

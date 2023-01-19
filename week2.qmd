@@ -1,0 +1,11 @@
+# Landsat Sensor
+
+## Spectral bands
+
+-   VIS, NIR
+
+## Characteristics
+
+-   30m spatial resolution
+
+-   revisit period is 16 days
