@@ -38,7 +38,7 @@
 \makeatother
 \usepackage{xcolor}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
@@ -74,35 +74,11 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
 \makeatother
 \makeatletter
-\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
@@ -158,8 +134,6 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={CASA0023 Remotely Sensing Cities and Environments},
-  pdfauthor={James Nutthaphol Rakratchatakul},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -167,21 +141,11 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{CASA0023 Remotely Sensing Cities and Environments}
-\author{James Nutthaphol Rakratchatakul}
-\date{1/19/2023}
+\author{}
+\date{}
 
 \begin{document}
-\maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, sharp corners, enhanced]}{\end{tcolorbox}}\fi
-
-\renewcommand*\contentsname{Table of contents}
-{
-\hypersetup{linkcolor=}
-\setcounter{tocdepth}{2}
-\tableofcontents
-}
-\bookmarksetup{startatroot}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
 
 \hypertarget{welcome}{%
 \chapter*{Welcome}\label{welcome}}
@@ -191,8 +155,7 @@ This is a learning diary of the module CASA0023: Remotely Sensing Cities
 and Environments offered by UCL.
 
 \hypertarget{author}{%
-\section*{\texorpdfstring{\textbf{Author}}{Author}}\label{author}}
-\addcontentsline{toc}{section}{\textbf{Author}}
+\section{\texorpdfstring{\textbf{Author}}{Author}}\label{author}}
 
 James - Nutthaphol Rakratchatakul
 
@@ -200,7 +163,7 @@ Student ID: 21174510
 
 Msc Urban Spatial Science
 
-\includegraphics{./images/james_pic.jpg}
+\includegraphics{images/james_pic.jpg}
 
 \textbf{Research Interest:}
 
@@ -208,217 +171,6 @@ James' research interest includes agricultural intelligence for
 sustainable planning, including combining satellite imagery and machine
 learning to help them monitor crop health, suggest how to optimize their
 resources and warn them before the disaster is coming.
-
-\bookmarksetup{startatroot}
-
-\hypertarget{an-introduction-to-remote-sensing}{%
-\chapter{An Introduction to Remote
-Sensing}\label{an-introduction-to-remote-sensing}}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Sensor
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \tightlist
-  \item
-    Passive
-  \end{enumerate}
-
-\begin{verbatim}
-1.  Use energy that is available
-
-2.  Usually detecting reflected energy from the sun
-
-3.  e.g. Human eye, camera, satellite sensor
-\end{verbatim}
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{1}
-  \item
-    Active
-
-    \begin{enumerate}
-    \def\labelenumiii{\arabic{enumiii}.}
-    \item
-      Have an energy source for illumination
-    \item
-      See through clouds
-    \item
-      e.g.~Radar, X-ray, LiDAR
-    \end{enumerate}
-  \end{enumerate}
-\item
-  Electromagnetic waves
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \item
-    Electromagnetic radiation (EMR) = Wave carry energy over time
-  \item
-    Energy carried by EMR waves = radiant energy
-  \item
-    Energy per unit of time = radiant flux
-  \item
-    Energy from the sun = incoming shortwave radiation or shortwave
-    radiation
-  \item
-    Atmospheric Correction;
-
-    \begin{enumerate}
-    \def\labelenumiii{\arabic{enumiii}.}
-    \item
-      to remove atmosphere like cloud
-    \item
-      Big issue to deal with
-
-      \begin{enumerate}
-      \def\labelenumiv{\arabic{enumiv}.}
-      \item
-        Programming; detect cloud and estimate by other pictures
-      \item
-        Using active sensors like Synthetic Aperture Radar (SAR) to see
-        through clouds, but the issue is about the accuracy of the
-        outputs
-
-        \begin{enumerate}
-        \def\labelenumv{\arabic{enumv}.}
-        \item
-          emit the signal by polarization (single/dual)
-        \item
-          HH = emitted in horizontal (H) and received in horizontal (H)
-        \end{enumerate}
-      \end{enumerate}
-    \end{enumerate}
-  \item
-    Color
-
-    \begin{enumerate}
-    \def\labelenumiii{\arabic{enumiii}.}
-    \item
-      Sky is blue; Sunlight is scattered by small wavelengths
-    \item
-      Moon sky is black; no atmosphere
-    \item
-      Ocean is blue; water absorb wavelength
-    \end{enumerate}
-  \end{enumerate}
-\item
-  Data
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \item
-    Format - Raster
-
-    \begin{enumerate}
-    \def\labelenumiii{\arabic{enumiii}.}
-    \tightlist
-    \item
-      common file types: BIL, BSQ, BIP, GeoTIFF
-    \end{enumerate}
-  \item
-    Resolutions
-
-    \begin{enumerate}
-    \def\labelenumiii{\arabic{enumiii}.}
-    \item
-      Spatial: range between 10 cm and several km
-
-      \begin{enumerate}
-      \def\labelenumiv{\arabic{enumiv}.}
-      \tightlist
-      \item
-        (e.g.~20cm or 30m)
-      \end{enumerate}
-    \item
-      Spectral: the number of bands it records data
-
-      \begin{enumerate}
-      \def\labelenumiv{\arabic{enumiv}.}
-      \tightlist
-      \item
-        spectral signature - creating from values for each wavelength
-        across the electromagnetic spectrum
-      \end{enumerate}
-    \item
-      Temporal = the time it revisits
-
-      \begin{enumerate}
-      \def\labelenumiv{\arabic{enumiv}.}
-      \tightlist
-      \item
-        e.g.~daily, every 7 days, on demand
-      \end{enumerate}
-    \item
-      Radiometric = identify differences in light or reflectance
-
-      \begin{enumerate}
-      \def\labelenumiv{\arabic{enumiv}.}
-      \tightlist
-      \item
-        e.g an 8 bit sensor has values between 0 and 255 (256 possible
-        values), an 11 bit sensor has values between 0 and 2047
-      \end{enumerate}
-    \end{enumerate}
-  \item
-    Color
-
-    \begin{enumerate}
-    \def\labelenumiii{\arabic{enumiii}.}
-    \item
-      True color: human can see e.g.~red, blue, green
-    \item
-      False color: including many bands human can't see
-    \end{enumerate}
-  \item
-    Satellite imagery
-
-    \begin{enumerate}
-    \def\labelenumiii{\arabic{enumiii}.}
-    \item
-      MODIS - 500 m
-    \item
-      Landsat - 30 cm
-    \end{enumerate}
-  \end{enumerate}
-\end{enumerate}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{landsat-sensor}{%
-\chapter{Landsat Sensor}\label{landsat-sensor}}
-
-\hypertarget{spectral-bands}{%
-\subsection{Spectral bands}\label{spectral-bands}}
-
-\begin{itemize}
-\tightlist
-\item
-  VIS, NIR
-\end{itemize}
-
-\hypertarget{characteristics}{%
-\subsection{Characteristics}\label{characteristics}}
-
-\begin{itemize}
-\tightlist
-\item
-  30m spatial resolution, revisit period is 16 days
-\end{itemize}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{references}{%
-\chapter*{References}\label{references}}
-\addcontentsline{toc}{chapter}{References}
-
-\hypertarget{refs}{}
-\begin{CSLReferences}{0}{0}
-\end{CSLReferences}
 
 
 

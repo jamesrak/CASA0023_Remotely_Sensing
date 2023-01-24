@@ -32,6 +32,20 @@
     "href": "week1.html",
     "title": "1  An Introduction to Remote Sensing",
     "section": "",
-    "text": "Sensor\n\nPassive\n\n1.  Use energy that is available\n\n2.  Usually detecting reflected energy from the sun\n\n3.  e.g. Human eye, camera, satellite sensor\n\nActive\n\nHave an energy source for illumination\nSee through clouds\ne.g. Radar, X-ray, LiDAR\n\n\nElectromagnetic waves\n\nElectromagnetic radiation (EMR) = Wave carry energy over time\nEnergy carried by EMR waves = radiant energy\nEnergy per unit of time = radiant flux\nEnergy from the sun = incoming shortwave radiation or shortwave radiation\nAtmospheric Correction;\n\nto remove atmosphere like cloud\nBig issue to deal with\n\nProgramming; detect cloud and estimate by other pictures\nUsing active sensors like Synthetic Aperture Radar (SAR) to see through clouds, but the issue is about the accuracy of the outputs\n\nemit the signal by polarization (single/dual)\nHH = emitted in horizontal (H) and received in horizontal (H)\n\n\n\nColor\n\nSky is blue; Sunlight is scattered by small wavelengths\nMoon sky is black; no atmosphere\nOcean is blue; water absorb wavelength\n\n\nData\n\nFormat - Raster\n\ncommon file types: BIL, BSQ, BIP, GeoTIFF\n\nResolutions\n\nSpatial: range between 10 cm and several km\n\n(e.g. 20cm or 30m)\n\nSpectral: the number of bands it records data\n\nspectral signature - creating from values for each wavelength across the electromagnetic spectrum\n\nTemporal = the time it revisits\n\ne.g. daily, every 7 days, on demand\n\nRadiometric = identify differences in light or reflectance\n\ne.g an 8 bit sensor has values between 0 and 255 (256 possible values), an 11 bit sensor has values between 0 and 2047\n\n\nColor\n\nTrue color: human can see e.g. red, blue, green\nFalse color: including many bands human can't see\n\nSatellite imagery\n\nMODIS - 500 m\nLandsat - 30 cm"
+    "text": "Sensor\n\nPassive\n\n\n1.  Use energy that is available\n\n2.  Usually detecting reflected energy from the sun\n\n3.  e.g. Human eye, camera, satellite sensor\n\nActive\n\nHave an energy source for illumination\nSee through clouds\ne.g. Radar, X-ray, LiDAR\n\n\nElectromagnetic waves\n\nElectromagnetic radiation (EMR) = Wave carry energy over time\nEnergy carried by EMR waves = radiant energy\nEnergy per unit of time = radiant flux\nEnergy from the sun = incoming shortwave radiation or shortwave radiation\nAtmospheric Correction;\n\nto remove atmosphere like cloud\nBig issue to deal with\n\nProgramming; detect cloud and estimate by other pictures\nUsing active sensors like Synthetic Aperture Radar (SAR) to see through clouds, but the issue is about the accuracy of the outputs\n\nemit the signal by polarization (single/dual)\nHH = emitted in horizontal (H) and received in horizontal (H)\n\n\n\nColor\n\nSky is blue; Sunlight is scattered by small wavelengths\nMoon sky is black; no atmosphere\nOcean is blue; water absorb wavelength\n\n\nData\n\nFormat - Raster\n\ncommon file types: BIL, BSQ, BIP, GeoTIFF\n\nResolutions\n\nSpatial: range between 10 cm and several km\n\n(e.g. 20cm or 30m)\n\nSpectral: the number of bands it records data\n\nspectral signature - creating from values for each wavelength across the electromagnetic spectrum\n\nTemporal = the time it revisits\n\ne.g. daily, every 7 days, on demand\n\nRadiometric = identify differences in light or reflectance\n\ne.g an 8 bit sensor has values between 0 and 255 (256 possible values), an 11 bit sensor has values between 0 and 2047\n\n\nColor\n\nTrue color: human can see e.g. red, blue, green\nFalse color: including many bands human can’t see\n\nSatellite imagery\n\nMODIS - 500 m\nLandsat - 30 cm"
+  },
+  {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "2  Landsat Sensor",
+    "section": "",
+    "text": "VIS, NIR"
+  },
+  {
+    "objectID": "week2.html#characteristics",
+    "href": "week2.html#characteristics",
+    "title": "2  Landsat Sensor",
+    "section": "2.2 Characteristics",
+    "text": "2.2 Characteristics\n\n30m spatial resolution\nrevisit period is 16 days"
   }
 ]

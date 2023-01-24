@@ -1,11 +1,45 @@
-# Landsat Sensor
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(fontawesome)
+```
 
-## Spectral bands
+# SAR Sensor
 
--   VIS, NIR
+Slide: [URL](https://jamesrak.github.io/CASA0023_Remotely_Sensing/SAR_presentation.html)
 
-## Characteristics
+## Synthetic Aperture Radar (SAR)
 
--   30m spatial resolution
+- Using radar over optical remote sensing
 
--   revisit period is 16 days
+- **Advantanges**
+
+> (+) Ability to capture data day or night
+
+> (+) See through clouds
+
+> (+) Weather independence by selecting proper frequency range
+
+> (+) Penetration through the vegetation
+canopy and the soil
+
+- (+/-) Sensitivity to structure
+
+- **Disadvantanges**
+
+> (-) Information content is different than optical and sometimes difficult to interpret
+
+- Variable resolution is 1 to 100 m
+
+
+
+## Radar VS. Optical: Optimising satellite use in land cover classification
+[https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/](https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/)
+
+![](images/volcano-image_big.jpg)
+An optical image of Kliuchevskoi volcano on the left, with a radar image on the right (Image credit: Michigan Tech Volcanology, Image Cropped)
+
+
+![](images/s1-maps-paper.png)
+
+Comparison of land cover classification results using a temporal average (left) and time series (right) of a combination of optical and radar images (Image Credit: Lopes et al., 2020)
+
+The categorization accuracy was tested using the so-called Kappa-coefficient. According to their findings, classifications based on radar time series were more accurate than those based on optical time series. However, more precise findings may not always result in better maps. Therefore, while examining maps, the possibility of inaccuracies caused by the similarity of categories in optical or radar data should be considered.

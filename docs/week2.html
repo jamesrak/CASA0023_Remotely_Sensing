@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Remotely Sensing Cities and Environments - 2&nbsp; Landsat Sensor</title>
+<title>CASA0023 Remotely Sensing Cities and Environments - 2&nbsp; SAR Sensor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Landsat Sensor</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">SAR Sensor</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Landsat Sensor</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">SAR Sensor</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -130,8 +130,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#spectral-bands" id="toc-spectral-bands" class="nav-link active" data-scroll-target="#spectral-bands"><span class="toc-section-number">2.1</span>  Spectral bands</a></li>
-  <li><a href="#characteristics" id="toc-characteristics" class="nav-link" data-scroll-target="#characteristics"><span class="toc-section-number">2.2</span>  Characteristics</a></li>
+  <li><a href="#synthetic-aperture-radar-sar" id="toc-synthetic-aperture-radar-sar" class="nav-link active" data-scroll-target="#synthetic-aperture-radar-sar"><span class="toc-section-number">2.1</span>  Synthetic Aperture Radar (SAR)</a></li>
+  <li><a href="#radar-vs.-optical-optimising-satellite-use-in-land-cover-classification" id="toc-radar-vs.-optical-optimising-satellite-use-in-land-cover-classification" class="nav-link" data-scroll-target="#radar-vs.-optical-optimising-satellite-use-in-land-cover-classification"><span class="toc-section-number">2.2</span>  Radar VS. Optical: Optimising satellite use in land cover classification</a></li>
   </ul>
 </nav>
     </div>
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Landsat Sensor</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">SAR Sensor</span></h1>
 </div>
 
 
@@ -154,18 +154,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="spectral-bands" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="spectral-bands"><span class="header-section-number">2.1</span> Spectral bands</h2>
+<p>Slide: <a href="https://jamesrak.github.io/CASA0023_Remotely_Sensing/SAR_presentation.html">URL</a></p>
+<section id="synthetic-aperture-radar-sar" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="synthetic-aperture-radar-sar"><span class="header-section-number">2.1</span> Synthetic Aperture Radar (SAR)</h2>
 <ul>
-<li>VIS, NIR</li>
+<li><p>Using radar over optical remote sensing</p></li>
+<li><p><strong>Advantanges</strong></p></li>
+</ul>
+<blockquote class="blockquote">
+<p>(+) Ability to capture data day or night</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>(+) See through clouds</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>(+) Weather independence by selecting proper frequency range</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>(+) Penetration through the vegetation canopy and the soil</p>
+</blockquote>
+<ul>
+<li><p>(+/-) Sensitivity to structure</p></li>
+<li><p><strong>Disadvantanges</strong></p></li>
+</ul>
+<blockquote class="blockquote">
+<p>(-) Information content is different than optical and sometimes difficult to interpret</p>
+</blockquote>
+<ul>
+<li>Variable resolution is 1 to 100 m</li>
 </ul>
 </section>
-<section id="characteristics" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="characteristics"><span class="header-section-number">2.2</span> Characteristics</h2>
-<ul>
-<li><p>30m spatial resolution</p></li>
-<li><p>revisit period is 16 days</p></li>
-</ul>
+<section id="radar-vs.-optical-optimising-satellite-use-in-land-cover-classification" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="radar-vs.-optical-optimising-satellite-use-in-land-cover-classification"><span class="header-section-number">2.2</span> Radar VS. Optical: Optimising satellite use in land cover classification</h2>
+<p><a href="https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/">https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/</a></p>
+<p><img src="images/volcano-image_big.jpg" class="img-fluid"> An optical image of Kliuchevskoi volcano on the left, with a radar image on the right (Image credit: Michigan Tech Volcanology, Image Cropped)</p>
+<p><img src="images/s1-maps-paper.png" class="img-fluid"></p>
+<p>Comparison of land cover classification results using a temporal average (left) and time series (right) of a combination of optical and radar images (Image Credit: Lopes et al., 2020)</p>
+<p>The categorization accuracy was tested using the so-called Kappa-coefficient. According to their findings, classifications based on radar time series were more accurate than those based on optical time series. However, more precise findings may not always result in better maps. Therefore, while examining maps, the possibility of inaccuracies caused by the similarity of categories in optical or radar data should be considered.</p>
 
 
 </section>

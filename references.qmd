@@ -2,3 +2,9 @@
 
 ::: {#refs}
 :::
+
+- https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/
+
+- https://www.l3harrisgeospatial.com/Learn/Blogs/Blog-Details/ArtMID/10198/ArticleID/24031/Enhancing-Situational-Awareness-with-SAR
+
+- https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar
