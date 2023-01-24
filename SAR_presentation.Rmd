@@ -75,7 +75,7 @@ https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD
 ---
 ### Available Data in Earth Engine
 
-PALSAR-2 ScanSAR Level 2.2
+**PALSAR-2 ScanSAR Level 2.2**
 
 .pull-left[
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
