@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -126,7 +145,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">1.1</span>  Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">1.2</span>  Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">1.3</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -147,90 +174,65 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<ol type="1">
-<li><p>Sensor</p>
-<ol type="1">
-<li>Passive</li>
-</ol>
-<!-- -->
-<pre><code>1.  Use energy that is available
-
-2.  Usually detecting reflected energy from the sun
-
-3.  e.g. Human eye, camera, satellite sensor</code></pre>
-<ol start="2" type="1">
-<li><p>Active</p>
-<ol type="1">
-<li><p>Have an energy source for illumination</p></li>
-<li><p>See through clouds</p></li>
-<li><p>e.g.&nbsp;Radar, X-ray, LiDAR</p></li>
-</ol></li>
-</ol></li>
-<li><p>Electromagnetic waves</p>
-<ol type="1">
-<li><p>Electromagnetic radiation (EMR) = Wave carry energy over time</p></li>
-<li><p>Energy carried by EMR waves = radiant energy</p></li>
-<li><p>Energy per unit of time = radiant flux</p></li>
-<li><p>Energy from the sun = incoming shortwave radiation or shortwave radiation</p></li>
-<li><p>Atmospheric Correction;</p>
-<ol type="1">
-<li><p>to remove atmosphere like cloud</p></li>
-<li><p>Big issue to deal with</p>
-<ol type="1">
-<li><p>Programming; detect cloud and estimate by other pictures</p></li>
-<li><p>Using active sensors like Synthetic Aperture Radar (SAR) to see through clouds, but the issue is about the accuracy of the outputs</p>
-<ol type="1">
-<li><p>emit the signal by polarization (single/dual)</p></li>
-<li><p>HH = emitted in horizontal (H) and received in horizontal (H)</p></li>
-</ol></li>
-</ol></li>
-</ol></li>
-<li><p>Color</p>
-<ol type="1">
-<li><p>Sky is blue; Sunlight is scattered by small wavelengths</p></li>
-<li><p>Moon sky is black; no atmosphere</p></li>
-<li><p>Ocean is blue; water absorb wavelength</p></li>
-</ol></li>
-</ol></li>
-<li><p>Data</p>
-<ol type="1">
-<li><p>Format - Raster</p>
-<ol type="1">
-<li>common file types: BIL, BSQ, BIP, GeoTIFF</li>
-</ol></li>
-<li><p>Resolutions</p>
-<ol type="1">
-<li><p>Spatial: range between 10 cm and several km</p>
-<ol type="1">
-<li>(e.g.&nbsp;20cm or 30m)</li>
-</ol></li>
-<li><p>Spectral: the number of bands it records data</p>
-<ol type="1">
-<li>spectral signature - creating from values for each wavelength across the electromagnetic spectrum</li>
-</ol></li>
-<li><p>Temporal = the time it revisits</p>
-<ol type="1">
-<li>e.g.&nbsp;daily, every 7 days, on demand</li>
-</ol></li>
-<li><p>Radiometric = identify differences in light or reflectance</p>
-<ol type="1">
-<li>e.g an 8 bit sensor has values between 0 and 255 (256 possible values), an 11 bit sensor has values between 0 and 2047</li>
-</ol></li>
-</ol></li>
-<li><p>Color</p>
-<ol type="1">
-<li><p>True color: human can see e.g.&nbsp;red, blue, green</p></li>
-<li><p>False color: including many bands human can’t see</p></li>
-</ol></li>
-<li><p>Satellite imagery</p>
-<ol type="1">
-<li><p>MODIS - 500 m</p></li>
-<li><p>Landsat - 30 cm</p></li>
-</ol></li>
-</ol></li>
-</ol>
+<section id="summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<h3 class="anchored">
+Sensor
+</h3>
+<p>There are two types of sensor which are active and passive sensors. Active sensors, such as Human eye, camera, satellite sensor, Use energy that is available and usually detect reflected energy from the sun. On the other hand, active sensors, such as Radar, X-ray and LiDAR, have an energy source for illumination and actively emit electromagnetic waves and then wait to receive.</p>
+<h3 class="anchored">
+Remotely sensed data
+</h3>
+<ul>
+<li>Most common data format is raster. Common file types include BIL, BSQ, BIP and GeoTIFF.</li>
+<li>Resolutions of data are considered in many aspects, including spatial, spectral, temporal and radiometric. The example of resolutions is provided below:</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 55%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resolution</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spatial</td>
+<td style="text-align: left;">30 m</td>
+</tr>
+<tr class="even">
+<td>Spectral</td>
+<td style="text-align: left;">Band 4 - Red, Band 5 - Near Infrared (NIR), Band 6 - SWIR 1</td>
+</tr>
+<tr class="odd">
+<td>Temporal</td>
+<td style="text-align: left;">daily</td>
+</tr>
+<tr class="even">
+<td>Radiometric</td>
+<td style="text-align: left;">an 8 bit sensor has values between 0 and 255 (256 possible values)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="applications" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
+<p>There are many useful applications of remote sensing. Examples of agricultural applications include productivity increasing. This could be done by providing inputs, given from remote sensing data, for improvement of soil fertility. The other example is to identify culturable wastelands or marginal lands. The benefit of this application is to increase agricultural area <span class="citation" data-cites="navalgund_remote_2007">(<a href="references.html#ref-navalgund_remote_2007" role="doc-biblioref">Navalgund, Jayaraman, and Roy 2007</a>)</span>. Without remote sensing data, it will be difficult to retrieve data covering every area in the country.</p>
+</section>
+<section id="reflection" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
+<p>As I used to work in the feed trading company before, remote sensing plays an important role of estimating crop supply. To identify the location of all crops such as corn and soybean in the country, we need to depend on remote sensing data to quickly estimate the supply of each crop. Otherwise, human are needed to survey in every fields, which is quite exhaustive. Furthermore, it is good to see the availability of data with different resolution, so we can choose and use it with a proper task.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-navalgund_remote_2007" class="csl-entry" role="doc-biblioentry">
+Navalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. <span>“Remote Sensing Applications: <span>An</span> Overview.”</span> <em>Current Science</em> 93 (12): 1747–66. <a href="http://www.jstor.org/stable/24102069">http://www.jstor.org/stable/24102069</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
