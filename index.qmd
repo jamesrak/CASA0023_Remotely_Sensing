@@ -17,7 +17,15 @@ Msc Urban Spatial Science
 ![](images/james_pic.jpg)
 :::
 :::
+---------------------------
 
-**Research Interest:**
+### **Research Interest**
 
 James' research interest includes agricultural intelligence for sustainable planning, including combining satellite imagery and machine learning to help them monitor crop health, suggest how to optimize their resources and warn them before the disaster is coming.
+
+---------------------------
+
+### **Education** 
+
+MSc., Urban Spatial Science, University College London (Present) <br>
+B.E., Computer Engineering, Chulalongkorn University (2018)
