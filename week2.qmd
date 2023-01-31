@@ -6,6 +6,12 @@ library(fontawesome)
 
 Slide: [URL](https://jamesrak.github.io/CASA0023_Remotely_Sensing/SAR_presentation.html)
 
+```{r, echo = FALSE, out.width='40%'}
+xaringanExtra::embed_xaringan(
+  url = "https://jamesrak.github.io/CASA0023_Remotely_Sensing/SAR_presentation.html",
+  ratio = "4:3")
+```
+
 ## Synthetic Aperture Radar (SAR)
 
 - Using radar over optical remote sensing
