@@ -82,5 +82,26 @@
     "title": "1  An Introduction to Remote Sensing",
     "section": "1.3 Reflection",
     "text": "1.3 Reflection\nAs I used to work in the feed trading company before, remote sensing plays an important role of estimating crop supply. To identify the location of all crops such as corn and soybean in the country, we need to depend on remote sensing data to quickly estimate the supply of each crop. Otherwise, human are needed to survey in every fields, which is quite exhaustive. Furthermore, it is good to see the availability of data with different resolution, so we can choose and use it with a proper task.\n\n\n\n\nNavalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. “Remote Sensing Applications: An Overview.” Current Science 93 (12): 1747–66. http://www.jstor.org/stable/24102069."
+  },
+  {
+    "objectID": "week3.html",
+    "href": "week3.html",
+    "title": "3  Remote sensing data",
+    "section": "",
+    "text": "Remote Sensing data are usually not ready to use, due to many reasons such as errors from sensor devices and cloud covering. Therefore, it is needed to correct before using. There are many corrections techniques as following:\n\n\n\n\n\n\n\nCorrection\nSolutions\n\n\n\n\n1. Geometric correction\nCorrection Techniques: Backward mapping (Linear Regression), Resampling  Explanation: Remotely sensed image distortions can be happened due to view angle, topography or wind. Therefore, we may use GCP (Ground control points) with polynomial function to correct\n\n\n2. Atmospheric Correction\nCorrection Techniques: Dark object subtraction (DOS), Psuedo-invariant Features (PIFs) Explanation: Absorption and scattering may reduces contrast of image and cause adjacency effect, which is the situation when radiance from pixels nearby is mixed into pixel of interest. One of the solutions is to apply Dark object subtraction (DOS) by searching each band for the darkest value then subtracts that from each pixel. The other method is Psuedo-invariant Features (PIFs), which is to adjust the image based on the regression result.\n\n\n3. Orthorectification correction\nCorrection Techniques: Cosine correction Explanation: According to the image, the street looks curve, even if the reality is the straight street. Therefore, cosine correction can be applied to remove distortions and making the pixels viewed at nadir (straight down).\n\n\n\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nDigital number (DN)\nIntensity of the electromagnetic radiation per pixel\n\n\nRadiance\nHow much light the instrument sees in meaningful units\n\n\nReflectance\nthe ratio of light leaving the target to amount striking the target.\n\n\nTOA reflectance\nMeasure radiation going down and up in a ring\n\n\nSurface reflectance\nMeasure radiation going down\n\n\nhemispherical reflectance\nAll of the light leaving the surface goes straight to the sensor"
+  },
+  {
+    "objectID": "week3.html#applications",
+    "href": "week3.html#applications",
+    "title": "3  Remote sensing data",
+    "section": "3.2 Applications",
+    "text": "3.2 Applications"
+  },
+  {
+    "objectID": "week3.html#reflection",
+    "href": "week3.html#reflection",
+    "title": "3  Remote sensing data",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection"
   }
 ]

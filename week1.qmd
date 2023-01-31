@@ -9,7 +9,7 @@ There are two types of sensor which are active and passive sensors. Active senso
 - Resolutions of data are considered in many aspects, including spatial, spectral, temporal and radiometric. The example of resolutions is provided below:
 
 Resolution|Example
-----------|:-------
+----|:--------
 Spatial| 30 m
 Spectral| Band 4 - Red, Band 5 - Near Infrared (NIR), Band 6 - SWIR 1
 Temporal| daily
