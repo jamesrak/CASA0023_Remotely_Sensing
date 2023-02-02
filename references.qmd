@@ -1,5 +1,7 @@
 # References {.unnumbered}
-
+---
+bibliography: references.bib
+---
 ::: {#refs}
 :::
 
