@@ -62,13 +62,12 @@ In our case study, we aim to incorporate remote sensing to reduce transportation
   
 **Global agendas:**
 
-According to [United Nations 2030 Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals) agenda, our approach could help enable 2 SDGs goals which are
+According to [United Nations 2030 Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals) agenda, our approach could help enable 2 SDGs which are
 
 * SDG 11: Sustainable Cities and Communities
-Sustainable transport
   + reduce greenhouse gas emissions - a quarter of energy-related global greenhouse gas emissions come from transport and that these emissions are projected to grow substantially in the years to come
 * SDG 13: Take urgent action to combat climate change and its impacts
-reaching net-zero carbon dioxide CO2 emissions globally by 2050
+  + reaching net-zero carbon dioxide CO2 emissions globally by 2050
 
 
 
