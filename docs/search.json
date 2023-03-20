@@ -158,7 +158,7 @@
     "href": "week5.html#applications",
     "title": "5  Introduction to Google Earth Engine",
     "section": "5.2 Applications",
-    "text": "5.2 Applications\nAfter we have finished conducting our own analysis, we can also publish our analysis via Google Earth Engine Apps, which provide ability to turn code into responsive applications. Some great examples are selected to present below:\n\n1. Europe’s Air Quality Winner (Source: gaertnerp)\n\n\n\n\n\n\nThis application was built to visualise the improvement of air quality in Europe after the lockdown due to the corona pandemic. The amount of NO2 was captured by remote sensing and shown in chrolopleth map. Users can compare the situation between 2 periods and The difference of NO2 median composite was calculated and shown. In my perspective, it is quite great visualisation that users can understand how much the air quality changes in a minute. However, there is some limitation of the visualisation that it is not allowed to zoom-in to see more details in each specific area.\n\n2. NDVI Slider (Source: khaledalshamaa)\n\n\n\n\n\n\nThe developer aims to compare Normalized Difference Vegetation Index (NDVI) between 2 years. The source of data is MODIS, which has the spatial resolution of 250 m and temporal resolution of 16-day. In this work, it is better than the previous work above in aspect that users can zoom-in to see NDVI in specific area."
+    "text": "5.2 Applications\nAfter we have finished conducting our own analysis, we can also publish our analysis via Google Earth Engine Apps, which provide ability to turn code into responsive applications. Some great examples are selected to present below:\n\n1. Europe’s Air Quality Winner (Source: gaertnerp)\n\n\n\n\n\n\n\nSummary: This application was built to visualise the improvement of air quality in Europe after the lockdown due to the corona pandemic. The amount of NO2 was captured by remote sensing and shown in chrolopleth map. Users can compare the situation between 2 periods and The difference of NO2 median composite was calculated and shown.\nPros: it is quite great visualisation that users can understand how much the air quality changes in a minute.\nCons: it is not allowed to zoom-in to see more details in each specific area.\n\n\n2. NDVI Slider (Source: khaledalshamaa)\n\n\n\n\n\n\n\nSummary: The developer aims to compare Normalized Difference Vegetation Index (NDVI) between 2 years. The source of data is MODIS, which has the spatial resolution of 250 m and temporal resolution of 16-day.\nPros: In this work, it is better than the previous work above in aspect that users can zoom-in to see NDVI in specific area.\nCons: Currently, users can select to view only the average of NDVI of each year. However, NDVI values are quite vary within the same year. If the system has the ability to view data by seasons (e.g. Autumn, Winter) or date picker to let users choose the period they want to see, it will be better."
   },
   {
     "objectID": "week5.html#reflection",
@@ -166,5 +166,47 @@
     "title": "5  Introduction to Google Earth Engine",
     "section": "5.3 Reflection",
     "text": "5.3 Reflection\n\nTools: I found that Google Earth Engine is a very powerful platform since it provides server side functions and large servers for high computation which is best fit with remote sensing projects that usually require big data for conducting researches. Moreover, it also provides UI for visualising maps from our codes. Before knowing the available of GEE, I found that it is quite hard to conduct remote sensing products since it took a very long time to conduct a research from data collection to data processing. Moreover, Earth Engine Data Catalog is very useful for the use of data. It provides many common remote sensing data that can be used for analysis in many tasks.\nApplications: Earth Engine App is very convenient for publishing analysis to let other people to see our results. It is also good for exploring data and finding insight. The great part of it is the interactive part which allow users to adjust parameters and see the results."
+  },
+  {
+    "objectID": "week8.html#applications",
+    "href": "week8.html#applications",
+    "title": "8  Temperature and Policy",
+    "section": "8.2 Applications",
+    "text": "8.2 Applications"
+  },
+  {
+    "objectID": "week8.html#reflection",
+    "href": "week8.html#reflection",
+    "title": "8  Temperature and Policy",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection"
+  },
+  {
+    "objectID": "week7.html#applications",
+    "href": "week7.html#applications",
+    "title": "7  Classification II",
+    "section": "7.2 Applications",
+    "text": "7.2 Applications"
+  },
+  {
+    "objectID": "week7.html#reflection",
+    "href": "week7.html#reflection",
+    "title": "7  Classification II",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection"
+  },
+  {
+    "objectID": "week6.html#applications",
+    "href": "week6.html#applications",
+    "title": "6  Classification",
+    "section": "6.2 Applications",
+    "text": "6.2 Applications"
+  },
+  {
+    "objectID": "week6.html#reflection",
+    "href": "week6.html#reflection",
+    "title": "6  Classification",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection"
   }
 ]

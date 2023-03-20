@@ -93,7 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./week6.html" rel="next">
 <link href="./week4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -192,6 +192,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week5.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to Google Earth Engine</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Temperature and Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -359,7 +374,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="images/5_eu_air_quality.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<p>This application was built to visualise the improvement of air quality in Europe after the lockdown due to the corona pandemic. The amount of NO2 was captured by remote sensing and shown in chrolopleth map. Users can compare the situation between 2 periods and The difference of NO2 median composite was calculated and shown. In my perspective, it is quite great visualisation that users can understand how much the air quality changes in a minute. However, there is some limitation of the visualisation that it is not allowed to zoom-in to see more details in each specific area.</p>
+<ul>
+<li><u>Summary</u>: This application was built to visualise the improvement of air quality in Europe after the lockdown due to the corona pandemic. The amount of NO2 was captured by remote sensing and shown in chrolopleth map. Users can compare the situation between 2 periods and The difference of NO2 median composite was calculated and shown.</li>
+<li><u>Pros</u>: it is quite great visualisation that users can understand how much the air quality changes in a minute.</li>
+<li><u>Cons</u>: it is not allowed to zoom-in to see more details in each specific area.</li>
+</ul>
 <div style="text-align: left;">
 <p><br>2. NDVI Slider (Source: <a href="https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider" target="_blank">khaledalshamaa</a>)<br></p>
 </div>
@@ -368,7 +387,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="images/5-gee_ndvi.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<p>The developer aims to compare Normalized Difference Vegetation Index (NDVI) between 2 years. The source of data is MODIS, which has the spatial resolution of 250 m and temporal resolution of 16-day. In this work, it is better than the previous work above in aspect that users can zoom-in to see NDVI in specific area.</p>
+<ul>
+<li><u>Summary</u>: The developer aims to compare Normalized Difference Vegetation Index (NDVI) between 2 years. The source of data is MODIS, which has the spatial resolution of 250 m and temporal resolution of 16-day.</li>
+<li><u>Pros</u>: In this work, it is better than the previous work above in aspect that users can zoom-in to see NDVI in specific area.</li>
+<li><u>Cons</u>: Currently, users can select to view only the average of NDVI of each year. However, NDVI values are quite vary within the same year. If the system has the ability to view data by seasons (e.g.&nbsp;Autumn, Winter) or date picker to let users choose the period they want to see, it will be better.</li>
+</ul>
 </section>
 <section id="reflection" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
@@ -486,8 +509,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week6.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

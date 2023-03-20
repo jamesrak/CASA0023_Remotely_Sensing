@@ -108,8 +108,10 @@ After we have finished conducting our own analysis, we can also publish our anal
 
 ![](images/5_eu_air_quality.png){width=100% fig-align="center"}
 
++ <u>Summary</u>: This application was built to visualise the improvement of air quality in Europe after the lockdown due to the corona pandemic. The amount of NO2 was captured by remote sensing and shown in chrolopleth map. Users can compare the situation between 2 periods and The difference of NO2 median composite was calculated and shown.
++ <u>Pros</u>: it is quite great visualisation that users can understand how much the air quality changes in a minute.
++ <u>Cons</u>: it is not allowed to zoom-in to see more details in each specific area.
 
-This application was built to visualise the improvement of air quality in Europe after the lockdown due to the corona pandemic. The amount of NO2 was captured by remote sensing and shown in chrolopleth map. Users can compare the situation between 2 periods and The difference of NO2 median composite was calculated and shown. In my perspective, it is quite great visualisation that users can understand how much the air quality changes in a minute. However, there is some limitation of the visualisation that it is not allowed to zoom-in to see more details in each specific area.
 
 
 :::: {style="text-align: left;"}
@@ -118,7 +120,9 @@ This application was built to visualise the improvement of air quality in Europe
 
 ![](images/5-gee_ndvi.png){width=100% fig-align="center"}
 
-The developer aims to compare Normalized Difference Vegetation Index (NDVI) between 2 years. The source of data is MODIS, which has the spatial resolution of 250 m and temporal resolution of 16-day. In this work, it is better than the previous work above in aspect that users can zoom-in to see NDVI in specific area.
++ <u>Summary</u>: The developer aims to compare Normalized Difference Vegetation Index (NDVI) between 2 years. The source of data is MODIS, which has the spatial resolution of 250 m and temporal resolution of 16-day. 
++ <u>Pros</u>: In this work, it is better than the previous work above in aspect that users can zoom-in to see NDVI in specific area.
++ <u>Cons</u>: Currently, users can select to view only the average of NDVI of each year. However, NDVI values are quite vary within the same year. If the system has the ability to view data by seasons (e.g. Autumn, Winter) or date picker to let users choose the period they want to see, it will be better.
 
 ## Reflection
 + **Tools**: I found that Google Earth Engine is a very powerful platform since it provides server side functions and large servers for high computation which is best fit with remote sensing projects that usually require big data for conducting researches. Moreover, it also provides UI for visualising maps from our codes. Before knowing the available of GEE, I found that it is quite hard to conduct remote sensing products since it took a very long time to conduct a research from data collection to data processing. Moreover, Earth Engine Data Catalog is very useful for the use of data. It provides many common remote sensing data that can be used for analysis in many tasks.
