@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -344,11 +363,10 @@ Edge enhancement is the process to make edges appear in a shaded relief.
 </section>
 <section id="applications" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
-<p>Texture Analysis: Change Detection in land cover over time, such as urban growth or deforestation.</p>
 <p>In this section, we will give examples of remote sensing research and analyse data pre-processing and image enhancement steps in the research.</p>
 <h4 class="anchored">
 <ol type="1">
-<li>Land cover and land use classification performance of machine learning algorithms in a boreal landscape using Sentinel-2 data (<a href="https://www.tandfonline.com/doi/epdf/10.1080/15481603.2019.1650447?needAccess=true&amp;role=button">Abdi 2019</a>)
+<li>Land cover and land use classification performance of machine learning algorithms in a boreal landscape using Sentinel-2 data (<a href="https://www.tandfonline.com/doi/epdf/10.1080/15481603.2019.1650447?needAccess=true&amp;role=button" target="_blank">Abdi 2019</a>)
 </li></ol></h4>
 
 <div class="cell" data-layout-align="center">
@@ -378,19 +396,38 @@ Edge enhancement is the process to make edges appear in a shaded relief.
 <li>Ratio: The normalized difference vegetation index (NDVI), the modified normalized difference water index (MNDWI) and the normalized difference built-up index (NDBI) were calculated to help capture vegetation, water, and artificial surfaces, respectively.</li>
 <li>Data Fusion: All calculated bands were appended in each Sentinel-2 scene. Therefore, the total layers of each scene are 13 layers.</li>
 </ul></li>
-<li><u>Comments</u>: The workflow of land cover and land use classification is quite good and complete. There are many data pre-processing techniques used in this work. However, the accuracy of classification in some classes is still not satisfactory, such as to identify open land. The producer’s accuracy of locating open land is only (0.44 ± 0.05). More indices from rationing should be used to help classify this class.</li>
+<li><u>Comments</u>: The workflow of land cover and land use classification is quite good and complete. There are many data pre-processing techniques used in this work. However, the accuracy of classification in some classes is still not satisfactory, such as to identify open land. The producer’s accuracy of locating open land is only (0.44 ± 0.05). More indices from rationing should be used to help classify this class, such as SAVI, EVI and NDRE <span class="citation" data-cites="radocaj_global_2020">(<a href="references.html#ref-radocaj_global_2020" role="doc-biblioref">Radočaj et al. 2020</a>)</span>.</li>
 </ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/3-indices_suggestion.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.mdpi.com/2073-445X/9/11/402">Radočaj, D. 2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 <!-- <h4>2. Building Classification</h4> -->
+<!-- Texture Analysis: Change Detection in land cover over time, such as urban growth or deforestation. -->
 <!-- [TODO] -->
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
 <ul>
-<li><p><strong>Content</strong>: There are many techniques of data pre-processing reviewing in this week. Although I conducted many machine learning projects, there are some data correction or image enhancement techniques that I forgot to do. After considering every data pre-processing techniques and apply the suitable techniques in each task, it is expected that the accuracy of the machine learning model or the quality of outputs would improve more or less.</p></li>
-<li><p><strong>Application</strong>: Since there are so many indices of remote sensing to use from rationing techniques, it is good to see which indices researchers selected to use. Previously, my research project is related to agriculture, so I performed crop classification by using only indices to capture healthy vegetation, such as NDVI. In this week, I have learnt so many new remote sensing indices, which could be useful in the future.</p></li>
+<li><p><strong>Content</strong>: There are many techniques of data pre-processing which are reviewed in this week. Although I conducted many machine learning projects, there are some data correction or image enhancement techniques that I forgot to do. After considering every data pre-processing techniques and apply the suitable techniques in each task, it is expected that the accuracy of the machine learning model or the quality of outputs would improve more or less.</p></li>
+<li><p><strong>Application</strong>: Since there are so many indices of remote sensing to use from rationing techniques, it is good to see which indices researchers selected to use. Previously, my research project is related to agriculture, so I performed crop classification by using only indices to capture healthy vegetation, such as NDVI. In this week, I have learnt so many new remote sensing indices, which could be useful in the future. However, one question in my mind is that deep learning is known for its ability of automatic feature extraction <span class="citation" data-cites="shaheen_impact_2016">(<a href="references.html#ref-shaheen_impact_2016" role="doc-biblioref">Shaheen, Verma, and Asafuddoula 2016</a>)</span>. I would like to know whether convolutional neural network or other deep learning models can automatically extract remote sensing indices by itself and even some undiscovered indices that may help improve the accuracy.</p></li>
 </ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-radocaj_global_2020" class="csl-entry" role="doc-biblioentry">
+Radočaj, Dorijan, Jasmina Obhođaš, Mladen Jurišić, and Mateo Gašparović. 2020. <span>“Global <span>Open</span> <span>Data</span> <span>Remote</span> <span>Sensing</span> <span>Satellite</span> <span>Missions</span> for <span>Land</span> <span>Monitoring</span> and <span>Conservation</span>: <span>A</span> <span>Review</span>.”</span> <em>Land</em> 9 (11): 402. <a href="https://doi.org/10.3390/land9110402">https://doi.org/10.3390/land9110402</a>.
+</div>
+<div id="ref-shaheen_impact_2016" class="csl-entry" role="doc-biblioentry">
+Shaheen, Fatma, Brijesh Verma, and Md. Asafuddoula. 2016. <span>“Impact of <span>Automatic</span> <span>Feature</span> <span>Extraction</span> in <span>Deep</span> <span>Learning</span> <span>Architecture</span>.”</span> In <em>2016 <span>International</span> <span>Conference</span> on <span>Digital</span> <span>Image</span> <span>Computing</span>: <span>Techniques</span> and <span>Applications</span> (<span>DICTA</span>)</em>, 1–8. <a href="https://doi.org/10.1109/DICTA.2016.7797053">https://doi.org/10.1109/DICTA.2016.7797053</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

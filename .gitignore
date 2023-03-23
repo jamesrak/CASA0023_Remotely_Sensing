@@ -8,3 +8,4 @@ renv/
 /.quarto/
 renv.lock
 libs/
+tmp/

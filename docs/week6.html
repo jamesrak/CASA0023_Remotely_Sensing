@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -61,6 +80,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -160,7 +180,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">6.1</span>  Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">6.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#classification-in-remote-sensing" id="toc-classification-in-remote-sensing" class="nav-link" data-scroll-target="#classification-in-remote-sensing"><span class="toc-section-number">6.1.1</span>  Classification in Remote Sensing</a></li>
+  <li><a href="#supervised-learning-techniques-classification" id="toc-supervised-learning-techniques-classification" class="nav-link" data-scroll-target="#supervised-learning-techniques-classification"><span class="toc-section-number">6.1.2</span>  Supervised Learning Techniques (Classification)</a></li>
+  </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">6.2</span>  Applications</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">6.3</span>  Reflection</a></li>
   </ul>
@@ -187,14 +211,130 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p>In this week, we will look into classification projects in remote sensing. Classification is one of the primary tasks in remote sensing. It can be done based on their spectral, spatial, or temporal characteristics.</p>
+<section id="classification-in-remote-sensing" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="classification-in-remote-sensing"><span class="header-section-number">6.1.1</span> Classification in Remote Sensing</h3>
+<p>There are many applications in remote sensing utilising classification techniques. Here are some example projects:</p>
+<ul>
+<li><strong>Land Cover Classification</strong>: It aims to categorise the earth’s surface into different classes, such as urban areas, forests, water bodies, agriculture, and wetlands, to monitor changes in land use, assess environmental impacts, or develop land use policies.</li>
+<li><strong>Urban Change Detection</strong>: A task that identifies changes in urban areas, such as urban expansion, urban green space loss, and land use alterations, to inform urban planning, assess the impact of urbanization, and monitor city growth.</li>
+<li><strong>Agricultural Monitoring</strong>: A project that classifies agricultural lands by crop type or irrigation status, assesses crop health, and monitors agricultural practices, to support food security, optimize resource use, and inform agricultural policies.</li>
+<li><strong>Forest Monitoring and Illegal Logging</strong>: A project that classifies forest types, monitors forest health, and detects deforestation, to support sustainable forest management and climate change mitigation efforts.</li>
+</ul>
+<p>Next, we will walk through machine learning models for classification and clustering tasks.</p>
+</section>
+<section id="supervised-learning-techniques-classification" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="supervised-learning-techniques-classification"><span class="header-section-number">6.1.2</span> Supervised Learning Techniques (Classification)</h3>
+<h4 class="anchored">
+<ol type="1">
+<li>Classification and regression trees (CART)
+</li></ol></h4>
+<img src="images/6-CART.jpg" class="img-fluid" style="width:80.0%" data-fig-align="center">
+
+<div style="text-align: center;">
+<p><br>Source: <a href="https://www.geeksforgeeks.org/cart-classification-and-regression-tree-in-machine-learning/" target="_blank">geeksforgeeks</a></p>
+</div>
+<ul>
+<li><u>Overview</u>: CART is a decision tree-based learning algorithm with multiple decision rules, which are derived from the data features. It can be used for both classification and regression tasks.</li>
+<li><u>Things to consider</u>:
+<ul>
+<li>Gini impurity: We use the Gini impurity at each branch to split the nodes further and models are selected from the lowest impurity. <br><span class="math display">\[Gini\ impurity= 1-(probability\ of\ yes)^2-(probability\ of\ no)^2\]</span></li>
+<li>Overfitting: It can be easily to face with overfitting issues. Some techniques to solve this issue is to limiting how trees grow (e.g.&nbsp;a minimum number of pixels in a leaf, 20 is often used) and weakest link pruning.</li>
+</ul></li>
+<li><u>Pros</u>: able to handle both continuous and categorical variables, interpretability through its tree structure, and robustness to outliers.</li>
+<li><u>Cons</u>: overfitting may occur, especially with high-dimensional data, and may require parameter tuning and pruning to optimize its performance</li>
+</ul>
+<h4 class="anchored">
+<ol start="2" type="1">
+<li>Random Forests
+</li></ol></h4>
+<img src="images/6-random_forest.jpg" class="img-fluid" style="width:80.0%" data-fig-align="center">
+
+<div style="text-align: center;">
+<p><br>Source: <a href="https://www.sciencedirect.com/topics/engineering/random-forest" target="_blank">Science Direct</a></p>
+</div>
+<ul>
+<li><p><u>Overview</u>: An ensemble learning method that combines multiple decision trees to improve classification or regression performance. The method is based on the concept of bagging (Bootstrap Aggregating), where each decision tree is trained on a random subset of the training data with replacement. The answer comes from voting system (majority decision).</p></li>
+<li><p><u>Things to consider</u>:</p>
+<ul>
+<li>Number of trees: More trees generally improve the model’s performance but may increase computational costs.</li>
+<li>Tree depth: Controlling tree depth can help balance model complexity and generalization.</li>
+<li>Number of features to consider at each split: This parameter affects the diversity of individual trees and can impact the model’s performance.</li>
+</ul></li>
+<li><p><u>Pros</u>: It is known for its robustness to overfitting, ability to handle high-dimensional data, and good performance in both classification and regression tasks in compared with single decision trees.</p></li>
+<li><p><u>Cons</u>: It is difficult to interpret and have longer prediction times due to the combination of multiple trees.</p></li>
+</ul>
+<h4 class="anchored">
+<ol start="3" type="1">
+<li>Support Vector Machine (SVM)
+</li></ol></h4>
+<img src="images/6-svm.jpg" class="img-fluid" style="width:60.0%" data-fig-align="center">
+
+<div style="text-align: center;">
+<p><br>Source: <a href="https://www.intechopen.com/chapters/64971" target="_blank">Núñez et al.&nbsp;2018 High-Resolution Satellite Imagery Classification for Urban Form Detection</a></p>
+</div>
+<ul>
+<li><p><u>Overview</u>: a supervised learning algorithm with the goal to find an optimal hyperplane that separates different classes in the feature space, maximizing the margin between classes. SVM can also handle both linear and non-linear relationships between features using kernel functions. There is also an ability to allow some misclassification to occur (soft margin).</p></li>
+<li><p><u>Things to consider</u>:</p>
+<ul>
+<li>Regularization parameter (C): A larger value of C leads to a smaller margin but fewer errors, while a smaller value allows for a larger margin but more errors.</li>
+<li>Kernel coefficient (Gamma): It controls the shape of the decision boundary and the degree of non-linearity in the model. Low gamma will result in big radius for classified points, vice versa.</li>
+<li>Kernel function: It determines how the input features are transformed. There are many kernel functions, such as linear, polynomial and RBF. It can significantly impact the performance of the SVM model. Note that linear and RBF kernel are popular choices for linear and non-linear problems, respectively.</li>
+</ul></li>
+<li><p><u>Pros</u>: SVM can handle linear and non-linear boundaries using different kernel functions.Moreover, SVM is less prone to overfitting, especially when using an appropriate regularization parameter.</p></li>
+<li><p><u>Cons</u>: As its complexity, it is challenging to interpret the model, especially with non-linear kernels. Furthermore, SVM can be computationally expensive, particularly with large datasets and non-linear kernels.</p></li>
+</ul>
+<!-- ### Unsupervised Learning Techniques (Clustering) -->
+<!-- <h4>1. DBScan</h4> -->
+<!-- + <u>Overview</u>:  -->
+<!-- + <u>Things to consider</u>:  -->
+<!-- + <u>Pros</u>: -->
+<!-- + <u>Cons</u>:  -->
+<!-- <h4>2. ISODATA</h4> -->
+<!-- + <u>Overview</u>:  -->
+<!-- + <u>Things to consider</u>:  -->
+<!-- + <u>Pros</u>: -->
+<!-- + <u>Cons</u>:  -->
+<!-- <h4>3. Cluster busting</h4> -->
+<!-- + <u>Overview</u>:  -->
+<!-- + <u>Things to consider</u>:  -->
+<!-- + <u>Pros</u>: -->
+<!-- + <u>Cons</u>:  -->
+</section>
 </section>
 <section id="applications" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
+<p>In this section, we will give examples of classification projects in remote sensing with an analysis.</p>
+<h4 class="anchored">
+<ol type="1">
+<li>Estimation of seismic building structural types using multi-sensor remote sensing and machine learning techniques <span class="citation" data-cites="geis_estimation_2015">(<a href="references.html#ref-geis_estimation_2015" role="doc-biblioref">Geiß et al. 2015</a>)</span>
+</li></ol></h4>
+
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/6-building_assessment.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.sciencedirect.com/science/article/pii/S0924271614002007?casa_token=u3apRU5gDPIAAAAA:MYW8HnyqSCwYN2zWvt35grf_fzWBYxOAnMzUus9xOs5GBa37vJS7Fh7-qFUMRF4OuLNeFhGz">Geiß et al.&nbsp;2015</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p><u>Summary</u>: This research aims to classify seismic building structural types (SBSTs) in earthquake-prone regions from multi-sensor remote sensing data. This research was conducted by using large parts of Padang city in Indonesia as the study areas. Data used in this project include a multispectral IKONOS image with 4 m of spatial resolution for the 4 multispectral bands, multitemporal Landsat data with 30 m spatial resolution for the 7 multispectral bands and height information from a digital surface model (DSM). The results of this research is optimistic that SVM achieved the accuracy of</p></li>
+<li><p><u>Methodology</u>: A set of features is derived from remote sensing data at two different spatial levels, building and block level. Then, researchers chose to conduct outlier identification by using one-class support vector machines (OC-SVM) to exclude unreliable data. After that, they classified building by using hierarchical supervised classification. The machine learning models used in this classification were support vector machine (SVM) and random forests.</p></li>
+<li><p><u>Comments</u>:</p></li>
+</ul>
 </section>
 <section id="reflection" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-geis_estimation_2015" class="csl-entry" role="doc-biblioentry">
+Geiß, Christian, Patrick Aravena Pelizari, Mattia Marconcini, Wayan Sengara, Mark Edwards, Tobia Lakes, and Hannes Taubenböck. 2015. <span>“Estimation of Seismic Building Structural Types Using Multi-Sensor Remote Sensing and Machine Learning Techniques.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 104 (June): 175–88. <a href="https://doi.org/10.1016/j.isprsjprs.2014.07.016">https://doi.org/10.1016/j.isprsjprs.2014.07.016</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
