@@ -206,15 +206,15 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>1. Geometric correction<br><img src="images/3%20-%20Geometric%20correction.png" class="img-fluid">Source:<a href="https://www.researchgate.net/publication/320710942_LANDSLIDE_SUSCEPTIBILITY_MODELLING_UNDER_ENVIRONMENTAL_CHANGES_A_CASE_STUDY_OF_CAMERON_HIGHLANDS_MALAYSIA/figures?lo=1">Abdul Basith</a></td>
+<td>1. Geometric correction<br><img src="images/3%20-%20Geometric%20correction.png" class="img-fluid">Source:<a href="https://www.researchgate.net/publication/320710942_LANDSLIDE_SUSCEPTIBILITY_MODELLING_UNDER_ENVIRONMENTAL_CHANGES_A_CASE_STUDY_OF_CAMERON_HIGHLANDS_MALAYSIA/figures?lo=1" target="_blank">Abdul Basith</a></td>
 <td style="text-align: left;"><strong>Correction Techniques:</strong> Backward mapping (Linear Regression), Resampling <br><br> <strong>Explanation:</strong> Remotely sensed image distortions can be happened due to view angle, topography or wind. Therefore, we may use GCP (Ground control points) with polynomial function to correct</td>
 </tr>
 <tr class="even">
-<td>2. Atmospheric Correction<br><img src="images/3%20-%20Atmospheric%20Correction.png" class="img-fluid">Source:<a href="https://www.researchgate.net/publication/3202775_Atmospheric_correction_of_Landsat_ETM_land_surface_imagery_I_Methods/figures?lo=1">Liang et al.&nbsp;2001</a></td>
+<td>2. Atmospheric Correction<br><img src="images/3%20-%20Atmospheric%20Correction.png" class="img-fluid">Source:<a href="https://www.researchgate.net/publication/3202775_Atmospheric_correction_of_Landsat_ETM_land_surface_imagery_I_Methods/figures?lo=1" target="_blank">Liang et al.&nbsp;2001</a></td>
 <td style="text-align: left;"><strong>Correction Techniques:</strong> Dark object subtraction (DOS), Psuedo-invariant Features (PIFs)<br><br> <strong>Explanation:</strong> Absorption and scattering may reduces contrast of image and cause adjacency effect, which is the situation when radiance from pixels nearby is mixed into pixel of interest. <br>One of the solutions is to apply Dark object subtraction (DOS) by searching each band for the darkest value then subtracts that from each pixel.<br> The other method is Psuedo-invariant Features (PIFs), which is to adjust the image based on the regression result.</td>
 </tr>
 <tr class="odd">
-<td>3. Orthorectification correction<br><img src="images/3%20-%20Orthorectification%20correction.png" class="img-fluid">Source:<a href="https://apollomapping.com/blog/g-faq-orthorectification-part">Apollo Mapping, 2016</a></td>
+<td>3. Orthorectification correction<br><img src="images/3%20-%20Orthorectification%20correction.png" class="img-fluid">Source:<a href="https://apollomapping.com/blog/g-faq-orthorectification-part" target="_blank">Apollo Mapping, 2016</a></td>
 <td style="text-align: left;"><strong>Correction Techniques:</strong> Cosine correction <br><br><strong>Explanation:</strong> According to the image, the street looks curve, even if the reality is the straight street. Therefore, cosine correction can be applied to remove distortions and making the pixels viewed at nadir (straight down).</td>
 </tr>
 </tbody>
@@ -319,11 +319,11 @@ Edge enhancement is the process to make edges appear in a shaded relief.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1. Ratio<br><img src="images/3-ratio_metrics.png" class="img-fluid"><br>Source: <a href="https://physicsopenlab.org/2017/01/30/ndvi-index/">PhysicsOpenLab</a></td>
+<td>1. Ratio<br><img src="images/3-ratio_metrics.png" class="img-fluid"><br>Source: <a href="https://physicsopenlab.org/2017/01/30/ndvi-index/" target="_blank">PhysicsOpenLab</a></td>
 <td style="text-align: left;">There are many indices derived from band rationing. They can be used to highlight areas with some spectral trait. One of the most popular indices derived by rationing is the Normalised Difference Vegetation Index (NDVI). It can be used to classify between healthy vegetation and unhealthy vegetation areas. We can calculate NDVI from NIR and RED bands by applying the equation as follows: <span class="math display">\[NDVI= \frac{NIR-Red}{NIR+Red}\]</span> Because the NDVI index is based on the concept that healthy and green vegetation reflects more in the NIR but absorbs in the Red wavelength, the new metric is highly useful.<br><br>There are tons of remote sensing indices. More indices can be found here: <a href="https://www.indexdatabase.de/">https://www.indexdatabase.de/</a></td>
 </tr>
 <tr class="even">
-<td>2. Filtering<br><img src="images/3-filtering.png" class="img-fluid">Source: <a href="https://slideplayer.com/slide/10752709/">Dwain Casey</a></td>
+<td>2. Filtering<br><img src="images/3-filtering.png" class="img-fluid">Source: <a href="https://slideplayer.com/slide/10752709/" target="_blank">Dwain Casey</a></td>
 <td style="text-align: left;">Filtering refers to moving window operations and save as a separate raster file, such as Laplacian filter. There are two types of filtering, which are <br>1. Low pass - averages the surrounding pixels <br>2. High pass - enhance local variations</td>
 </tr>
 <tr class="odd">
@@ -335,7 +335,7 @@ Edge enhancement is the process to make edges appear in a shaded relief.
 <td style="text-align: left;">Data fusion is the process of appending new raster data to the existing data (stacking).</td>
 </tr>
 <tr class="odd">
-<td>5. Texture analysis<img src="images/3-texture_analysis.gif" class="img-fluid">Source: <a href="https://www.l3harrisgeospatial.com/docs/backgroundtexturemetrics.html">Harris</a></td>
+<td>5. Texture analysis<img src="images/3-texture_analysis.gif" class="img-fluid">Source: <a href="https://www.l3harrisgeospatial.com/docs/backgroundtexturemetrics.html" target="_blank">Harris</a></td>
 <td style="text-align: left;">Texture analysis examines patterns, structures, and variations in the texture of an image, which can be used to distinguish different features on the ground. Texture refers to spatial variation of gray values.</td>
 </tr>
 </tbody>

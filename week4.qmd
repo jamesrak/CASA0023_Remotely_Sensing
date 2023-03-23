@@ -62,7 +62,7 @@ In our case study, we aim to incorporate remote sensing to reduce transportation
 + Task2: classify vehicle types
   + <u>Methodology</u>: Use convolutional neural network (CNN) with satellite imagery to classify vehicle types
   + <u>Data</u>: Remote Sensing data and vehicle label for classification
-  + <u>Sample project</u>: [https://github.com/AlperenCicek/vehicle-detection-from-satellite](https://github.com/AlperenCicek/vehicle-detection-from-satellite)
+  + <u>Sample project</u>: [https://github.com/AlperenCicek/vehicle-detection-from-satellite](https://github.com/AlperenCicek/vehicle-detection-from-satellite){target="_blank"}
 
 + Task3: monitor CO2 emission
   + <u>Methodology</u>: Having real-time maps of GHGs (detected from remote sensing) could help us quantify CO2 emissions. For example, data on emissions make it possible to set effective targets, and pinpointing the sources of emissions makes it possible to enforce regulation
@@ -70,7 +70,7 @@ In our case study, we aim to incorporate remote sensing to reduce transportation
   
 **Global agendas:**
 
-According to [United Nations 2030 Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals) agenda, our approach could help enable 2 SDGs which are
+According to [United Nations 2030 Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals){target="_blank"} agenda, our approach could help enable 2 SDGs which are
 
 * SDG 11: Sustainable Cities and Communities
   + reduce greenhouse gas emissions - a quarter of energy-related global greenhouse gas emissions come from transport and that these emissions are projected to grow substantially in the years to come
