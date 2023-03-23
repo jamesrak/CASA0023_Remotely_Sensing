@@ -1,16 +1,22 @@
 # Remote sensing data
 
 ## Summary
-<h3>Data Correction</h3>
+
+In this week, we will focus on the techniques using for data pre-processing.
+
+### Data Correction
 Remote Sensing data are usually not ready to use, due to many reasons such as errors from sensor devices and cloud covering. Therefore, it is needed to correct before using. There are many corrections techniques as following:
 
 Correction|Solutions
 ------|:-------
-1. Geometric correction<br>![](images/3 - Geometric correction.png)|**Correction Techniques:** Backward mapping (Linear Regression), Resampling <br><br> **Explanation:** Remotely sensed image distortions can be happened due to view angle, topography or wind. Therefore, we may use GCP (Ground control points) with polynomial function to correct
-2. Atmospheric Correction<br>![](images/3 - Atmospheric Correction.png)|**Correction Techniques:** Dark object subtraction (DOS), Psuedo-invariant Features (PIFs)<br><br> **Explanation:** Absorption and scattering may reduces contrast of image and cause adjacency effect, which is the situation when radiance from pixels nearby is mixed into pixel of interest. <br>One of the solutions is to apply Dark object subtraction (DOS) by searching each band for the darkest value then subtracts that from each pixel.<br> The other method is Psuedo-invariant Features (PIFs), which is to adjust the image based on the regression result.
-3. Orthorectification correction<br>![](images/3 - Orthorectification correction.png)|**Correction Techniques:** Cosine correction <br><br>**Explanation:** According to the image, the street looks curve, even if the reality is the straight street. Therefore, cosine correction can be applied to remove distortions and making the pixels viewed at nadir (straight down).
+1. Geometric correction<br>![](images/3 - Geometric correction.png)Source:[Abdul Basith](https://www.researchgate.net/publication/320710942_LANDSLIDE_SUSCEPTIBILITY_MODELLING_UNDER_ENVIRONMENTAL_CHANGES_A_CASE_STUDY_OF_CAMERON_HIGHLANDS_MALAYSIA/figures?lo=1)|**Correction Techniques:** Backward mapping (Linear Regression), Resampling <br><br> **Explanation:** Remotely sensed image distortions can be happened due to view angle, topography or wind. Therefore, we may use GCP (Ground control points) with polynomial function to correct
+2. Atmospheric Correction<br>![](images/3 - Atmospheric Correction.png)Source:[Liang et al. 2001](https://www.researchgate.net/publication/3202775_Atmospheric_correction_of_Landsat_ETM_land_surface_imagery_I_Methods/figures?lo=1)|**Correction Techniques:** Dark object subtraction (DOS), Psuedo-invariant Features (PIFs)<br><br> **Explanation:** Absorption and scattering may reduces contrast of image and cause adjacency effect, which is the situation when radiance from pixels nearby is mixed into pixel of interest. <br>One of the solutions is to apply Dark object subtraction (DOS) by searching each band for the darkest value then subtracts that from each pixel.<br> The other method is Psuedo-invariant Features (PIFs), which is to adjust the image based on the regression result.
+3. Orthorectification correction<br>![](images/3 - Orthorectification correction.png)Source:[Apollo Mapping, 2016](https://apollomapping.com/blog/g-faq-orthorectification-part)|**Correction Techniques:** Cosine correction <br><br>**Explanation:** According to the image, the street looks curve, even if the reality is the straight street. Therefore, cosine correction can be applied to remove distortions and making the pixels viewed at nadir (straight down).
 <br>
-<h3>Technical Terms</h3>
+
+### Technical Terms
+There are some specific terms used in remote sensing. We summarise some of them which are usually found in the research paper.
+
 Term|Definition
 ----|:---------
 Digital number (DN)|Intensity of the electromagnetic radiation per pixel
@@ -20,7 +26,76 @@ TOA reflectance|Measure radiation going down and up in a ring
 Surface reflectance|Measure radiation going down
 hemispherical reflectance|All of the light leaving the surface goes straight to the sensor
 
+### Image Enhancement
+In this process, we will try to extract more features or emphasize certain features, similar to features engineering. We can also apply to imagery to improve the visual appearance.
+<!--
+<h4>**1. Ratio**</h4>
+There are many indices derived from band rationing. They can be used to highlight areas with some spectral trait. One of the most popular indices derived by rationing is the Normalised Difference Vegetation Index (NDVI). It can be used to classify between healthy vegetation and unhealthy vegetation areas. We can calculate NDVI from NIR and RED bands by applying the equation as follows:
+
+$$NDVI= \frac{NIR-Red}{NIR+Red}$$
+Because the NDVI index is based on the concept that healthy and green vegetation reflects more in the NIR but absorbs in the Red wavelength, the new metric is highly useful. The meaning of each band before combining is also provided in the figure below:
+
+```{r echo=FALSE, out.width = "70%", fig.align='center', cache=FALSE, fig.cap= "Source: [PhysicsOpenLab](https://physicsopenlab.org/2017/01/30/ndvi-index/)"}
+knitr::include_graphics('images/3-NDVI-trait.png') 
+```
+
+There are many other indices that we can extract by using rationing techniques. We gave an example of some indices which might be useful.
+
+```{r echo=FALSE, out.width = "70%", fig.align='center', cache=FALSE, fig.cap= "Source: [Götze (2010)](https://www.researchgate.net/publication/236784254_Spectrometric_analyses_in_comparison_to_the_physiological_condition_of_heavy_metal_stressed_floodplain_vegetation_in_a_standardised_experiment)"}
+knitr::include_graphics('images/3-ratio_metrics.png') 
+```
+
+There are tons of remote sensing indices. More indices can be found here: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
+
+<h4>**2. Filtering**</h4>
+It refers to moving window operations and save as a separate raster file, such as Laplacian filter. There are two types of filtering, which are
+
++ Low pass - averages the surrounding pixels
+
++ High pass - enhance local variations
+
+```{r echo=FALSE, out.width = "70%", fig.align='center', cache=FALSE, fig.cap= "Source: [Dwain Casey](https://slideplayer.com/slide/10752709/)"}
+knitr::include_graphics('images/3-filtering.png') 
+```
+
+<h4>**3. Edge enhancement**</h4>
+Edge enhancement is the process to make edges appear in a shaded relief.
+-->
+
+Enhancements|Description
+----------|:---------
+1. Ratio<br>![](images/3-ratio_metrics.png)<br>Source: [PhysicsOpenLab](https://physicsopenlab.org/2017/01/30/ndvi-index/)|There are many indices derived from band rationing. They can be used to highlight areas with some spectral trait. One of the most popular indices derived by rationing is the Normalised Difference Vegetation Index (NDVI). It can be used to classify between healthy vegetation and unhealthy vegetation areas. We can calculate NDVI from NIR and RED bands by applying the equation as follows: $$NDVI= \frac{NIR-Red}{NIR+Red}$$ Because the NDVI index is based on the concept that healthy and green vegetation reflects more in the NIR but absorbs in the Red wavelength, the new metric is highly useful.<br><br>There are tons of remote sensing indices. More indices can be found here: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
+2. Filtering<br>![](images/3-filtering.png)Source: [Dwain Casey](https://slideplayer.com/slide/10752709/)|Filtering refers to moving window operations and save as a separate raster file, such as Laplacian filter. There are two types of filtering, which are <br>1. Low pass - averages the surrounding pixels <br>2. High pass - enhance local variations
+3. Edge enhancement<br>|Edge enhancement is the process to make edges appear in a shaded relief. It is particularly useful for images that have low contrast or are affected by noise, where it can be difficult to distinguish between adjacent features.
+4. Data fusion|Data fusion is the process of appending new raster data to the existing data (stacking).
+5. Texture analysis![](images/3-texture_analysis.gif)Source: [Harris](https://www.l3harrisgeospatial.com/docs/backgroundtexturemetrics.html)|Texture analysis examines patterns, structures, and variations in the texture of an image, which can be used to distinguish different features on the ground. Texture refers to spatial variation of gray values.
+
+
 ## Applications
+
+Texture Analysis: Change Detection in land cover over time, such as urban growth or deforestation.
+
+In this section, we will give examples of remote sensing research and analyse data pre-processing and image enhancement steps in the research.
+
+<h4>1. Land cover and land use classification performance of machine learning algorithms in a boreal landscape using Sentinel-2 data
+([Abdi 2019](https://www.tandfonline.com/doi/epdf/10.1080/15481603.2019.1650447?needAccess=true&role=button))</h4>
+
+```{r echo=FALSE, out.width = "60%", fig.align='center', cache=FALSE}
+knitr::include_graphics('images/3-application-change-detection.png') 
+```
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=FALSE, fig.cap= "Source: [Abdi 2019](https://www.tandfonline.com/doi/epdf/10.1080/15481603.2019.1650447?needAccess=true&role=button)"}
+knitr::include_graphics('images/3-application-change-detection-methods.png') 
+```
+
++ <u>Summary</u>: It aims to conduct land use classification and compares the classification performance of four machine learning algorithms (support vector machines, random forests, extreme gradient boosting, and deep learning) in a complex boreal landscape in south-central Sweden using Sentinel-2 satellite data. The satellite imagery used for the classification were multi-temporal scenes from Sentinel-2 and the study area consists of eight land-cover and land-use classes.
++ <u>Data Pre-processing</u>:
+  + Atmospheric correction: to converts the top-of-atmosphere reflectance Level-1C data to a bottom-of-atmosphere (BOA) reflectance
+  + Ratio: The normalized difference vegetation index (NDVI), the modified normalized difference water index (MNDWI)  and the normalized difference built-up index (NDBI) were calculated to help capture vegetation, water, and artificial surfaces, respectively.
+  + Data Fusion: All calculated bands were appended in each Sentinel-2 scene. Therefore, the total layers of each scene are 13 layers.
+  
+<!-- <h4>2. Building Classification</h4> -->
+
+<!-- [TODO] -->
 
 
 ## Reflection

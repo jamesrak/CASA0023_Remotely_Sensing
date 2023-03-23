@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -160,7 +161,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">3.1</span>  Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">3.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#data-correction" id="toc-data-correction" class="nav-link" data-scroll-target="#data-correction"><span class="toc-section-number">3.1.1</span>  Data Correction</a></li>
+  <li><a href="#technical-terms" id="toc-technical-terms" class="nav-link" data-scroll-target="#technical-terms"><span class="toc-section-number">3.1.2</span>  Technical Terms</a></li>
+  <li><a href="#image-enhancement" id="toc-image-enhancement" class="nav-link" data-scroll-target="#image-enhancement"><span class="toc-section-number">3.1.3</span>  Image Enhancement</a></li>
+  </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">3.2</span>  Applications</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">3.3</span>  Reflection</a></li>
   </ul>
@@ -187,15 +193,11 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
-<h3 class="anchored">
-Data Correction
-</h3>
+<p>In this week, we will focus on the techniques using for data pre-processing.</p>
+<section id="data-correction" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="data-correction"><span class="header-section-number">3.1.1</span> Data Correction</h3>
 <p>Remote Sensing data are usually not ready to use, due to many reasons such as errors from sensor devices and cloud covering. Therefore, it is needed to correct before using. There are many corrections techniques as following:</p>
 <table class="table">
-<colgroup>
-<col style="width: 42%">
-<col style="width: 57%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Correction</th>
@@ -204,23 +206,24 @@ Data Correction
 </thead>
 <tbody>
 <tr class="odd">
-<td>1. Geometric correction<br><img src="images/3%20-%20Geometric%20correction.png" class="img-fluid"></td>
+<td>1. Geometric correction<br><img src="images/3%20-%20Geometric%20correction.png" class="img-fluid">Source:<a href="https://www.researchgate.net/publication/320710942_LANDSLIDE_SUSCEPTIBILITY_MODELLING_UNDER_ENVIRONMENTAL_CHANGES_A_CASE_STUDY_OF_CAMERON_HIGHLANDS_MALAYSIA/figures?lo=1">Abdul Basith</a></td>
 <td style="text-align: left;"><strong>Correction Techniques:</strong> Backward mapping (Linear Regression), Resampling <br><br> <strong>Explanation:</strong> Remotely sensed image distortions can be happened due to view angle, topography or wind. Therefore, we may use GCP (Ground control points) with polynomial function to correct</td>
 </tr>
 <tr class="even">
-<td>2. Atmospheric Correction<br><img src="images/3%20-%20Atmospheric%20Correction.png" class="img-fluid"></td>
+<td>2. Atmospheric Correction<br><img src="images/3%20-%20Atmospheric%20Correction.png" class="img-fluid">Source:<a href="https://www.researchgate.net/publication/3202775_Atmospheric_correction_of_Landsat_ETM_land_surface_imagery_I_Methods/figures?lo=1">Liang et al.&nbsp;2001</a></td>
 <td style="text-align: left;"><strong>Correction Techniques:</strong> Dark object subtraction (DOS), Psuedo-invariant Features (PIFs)<br><br> <strong>Explanation:</strong> Absorption and scattering may reduces contrast of image and cause adjacency effect, which is the situation when radiance from pixels nearby is mixed into pixel of interest. <br>One of the solutions is to apply Dark object subtraction (DOS) by searching each band for the darkest value then subtracts that from each pixel.<br> The other method is Psuedo-invariant Features (PIFs), which is to adjust the image based on the regression result.</td>
 </tr>
 <tr class="odd">
-<td>3. Orthorectification correction<br><img src="images/3%20-%20Orthorectification%20correction.png" class="img-fluid"></td>
+<td>3. Orthorectification correction<br><img src="images/3%20-%20Orthorectification%20correction.png" class="img-fluid">Source:<a href="https://apollomapping.com/blog/g-faq-orthorectification-part">Apollo Mapping, 2016</a></td>
 <td style="text-align: left;"><strong>Correction Techniques:</strong> Cosine correction <br><br><strong>Explanation:</strong> According to the image, the street looks curve, even if the reality is the straight street. Therefore, cosine correction can be applied to remove distortions and making the pixels viewed at nadir (straight down).</td>
 </tr>
 </tbody>
 </table>
-<br>
-<h3 class="anchored">
-Technical Terms
-</h3>
+<p><br></p>
+</section>
+<section id="technical-terms" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="technical-terms"><span class="header-section-number">3.1.2</span> Technical Terms</h3>
+<p>There are some specific terms used in remote sensing. We summarise some of them which are usually found in the research paper.</p>
 <table class="table">
 <colgroup>
 <col style="width: 28%">
@@ -260,8 +263,124 @@ Technical Terms
 </tbody>
 </table>
 </section>
+<section id="image-enhancement" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="image-enhancement"><span class="header-section-number">3.1.3</span> Image Enhancement</h3>
+<p>In this process, we will try to extract more features or emphasize certain features, similar to features engineering. We can also apply to imagery to improve the visual appearance. <!--
+<h4>**1. Ratio**</h4>
+There are many indices derived from band rationing. They can be used to highlight areas with some spectral trait. One of the most popular indices derived by rationing is the Normalised Difference Vegetation Index (NDVI). It can be used to classify between healthy vegetation and unhealthy vegetation areas. We can calculate NDVI from NIR and RED bands by applying the equation as follows:
+
+$$NDVI= \frac{NIR-Red}{NIR+Red}$$
+Because the NDVI index is based on the concept that healthy and green vegetation reflects more in the NIR but absorbs in the Red wavelength, the new metric is highly useful. The meaning of each band before combining is also provided in the figure below:
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![Source: [PhysicsOpenLab](https://physicsopenlab.org/2017/01/30/ndvi-index/)](images/3-NDVI-trait.png){fig-align='center' width=70%}
+:::
+:::
+
+
+There are many other indices that we can extract by using rationing techniques. We gave an example of some indices which might be useful.
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![Source: [Götze (2010)](https://www.researchgate.net/publication/236784254_Spectrometric_analyses_in_comparison_to_the_physiological_condition_of_heavy_metal_stressed_floodplain_vegetation_in_a_standardised_experiment)](images/3-ratio_metrics.png){fig-align='center' width=70%}
+:::
+:::
+
+
+There are tons of remote sensing indices. More indices can be found here: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
+
+<h4>**2. Filtering**</h4>
+It refers to moving window operations and save as a separate raster file, such as Laplacian filter. There are two types of filtering, which are
+
++ Low pass - averages the surrounding pixels
+
++ High pass - enhance local variations
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![Source: [Dwain Casey](https://slideplayer.com/slide/10752709/)](images/3-filtering.png){fig-align='center' width=70%}
+:::
+:::
+
+
+<h4>**3. Edge enhancement**</h4>
+Edge enhancement is the process to make edges appear in a shaded relief.
+--></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Enhancements</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Ratio<br><img src="images/3-ratio_metrics.png" class="img-fluid"><br>Source: <a href="https://physicsopenlab.org/2017/01/30/ndvi-index/">PhysicsOpenLab</a></td>
+<td style="text-align: left;">There are many indices derived from band rationing. They can be used to highlight areas with some spectral trait. One of the most popular indices derived by rationing is the Normalised Difference Vegetation Index (NDVI). It can be used to classify between healthy vegetation and unhealthy vegetation areas. We can calculate NDVI from NIR and RED bands by applying the equation as follows: <span class="math display">\[NDVI= \frac{NIR-Red}{NIR+Red}\]</span> Because the NDVI index is based on the concept that healthy and green vegetation reflects more in the NIR but absorbs in the Red wavelength, the new metric is highly useful.<br><br>There are tons of remote sensing indices. More indices can be found here: <a href="https://www.indexdatabase.de/">https://www.indexdatabase.de/</a></td>
+</tr>
+<tr class="even">
+<td>2. Filtering<br><img src="images/3-filtering.png" class="img-fluid">Source: <a href="https://slideplayer.com/slide/10752709/">Dwain Casey</a></td>
+<td style="text-align: left;">Filtering refers to moving window operations and save as a separate raster file, such as Laplacian filter. There are two types of filtering, which are <br>1. Low pass - averages the surrounding pixels <br>2. High pass - enhance local variations</td>
+</tr>
+<tr class="odd">
+<td>3. Edge enhancement<br></td>
+<td style="text-align: left;">Edge enhancement is the process to make edges appear in a shaded relief. It is particularly useful for images that have low contrast or are affected by noise, where it can be difficult to distinguish between adjacent features.</td>
+</tr>
+<tr class="even">
+<td>4. Data fusion</td>
+<td style="text-align: left;">Data fusion is the process of appending new raster data to the existing data (stacking).</td>
+</tr>
+<tr class="odd">
+<td>5. Texture analysis<img src="images/3-texture_analysis.gif" class="img-fluid">Source: <a href="https://www.l3harrisgeospatial.com/docs/backgroundtexturemetrics.html">Harris</a></td>
+<td style="text-align: left;">Texture analysis examines patterns, structures, and variations in the texture of an image, which can be used to distinguish different features on the ground. Texture refers to spatial variation of gray values.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
 <section id="applications" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
+<p>Texture Analysis: Change Detection in land cover over time, such as urban growth or deforestation.</p>
+<p>In this section, we will give examples of remote sensing research and analyse data pre-processing and image enhancement steps in the research.</p>
+<h4 class="anchored">
+<ol type="1">
+<li>Land cover and land use classification performance of machine learning algorithms in a boreal landscape using Sentinel-2 data (<a href="https://www.tandfonline.com/doi/epdf/10.1080/15481603.2019.1650447?needAccess=true&amp;role=button">Abdi 2019</a>)
+</li></ol></h4>
+
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/3-application-change-detection.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/3-application-change-detection-methods.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.tandfonline.com/doi/epdf/10.1080/15481603.2019.1650447?needAccess=true&amp;role=button">Abdi 2019</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><u>Summary</u>: It aims to conduct land use classification and compares the classification performance of four machine learning algorithms (support vector machines, random forests, extreme gradient boosting, and deep learning) in a complex boreal landscape in south-central Sweden using Sentinel-2 satellite data. The satellite imagery used for the classification were multi-temporal scenes from Sentinel-2 and the study area consists of eight land-cover and land-use classes.</li>
+<li><u>Data Pre-processing</u>:
+<ul>
+<li>Atmospheric correction: to converts the top-of-atmosphere reflectance Level-1C data to a bottom-of-atmosphere (BOA) reflectance</li>
+<li>Ratio: The normalized difference vegetation index (NDVI), the modified normalized difference water index (MNDWI) and the normalized difference built-up index (NDBI) were calculated to help capture vegetation, water, and artificial surfaces, respectively.</li>
+<li>Data Fusion: All calculated bands were appended in each Sentinel-2 scene. Therefore, the total layers of each scene are 13 layers.</li>
+</ul></li>
+</ul>
+<!-- <h4>2. Building Classification</h4> -->
+<!-- [TODO] -->
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>

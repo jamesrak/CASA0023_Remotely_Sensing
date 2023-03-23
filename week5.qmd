@@ -101,9 +101,8 @@ var median = oneimage_study_area_cloud.reduce(ee.Reducer.median());
 
 After we have finished conducting our own analysis, we can also publish our analysis via Google Earth Engine Apps, which provide ability to turn code into responsive applications. Some great examples are selected to present below:
 
-:::: {style="text-align: left;"}
-<br>1. Europe's Air Quality Winner (Source: [gaertnerp](https://gaertnerp.users.earthengine.app/view/europe-air-quality-winner#cloud=10;scale=15000;ranking=absolute%20difference%20(%CE%BCmol%2Fm%C2%B2);startdate=2020-03-01;enddate=2020-04-01){target="_blank"})<br>
-::::
+<h4>1. Europe's Air Quality Winner (Source: [gaertnerp](https://gaertnerp.users.earthengine.app/view/europe-air-quality-winner#cloud=10;scale=15000;ranking=absolute%20difference%20(%CE%BCmol%2Fm%C2%B2);startdate=2020-03-01;enddate=2020-04-01){target="_blank"})</h4>
+
 
 
 ![](images/5_eu_air_quality.png){width=100% fig-align="center"}
@@ -114,9 +113,8 @@ After we have finished conducting our own analysis, we can also publish our anal
 
 
 
-:::: {style="text-align: left;"}
-<br>2. NDVI Slider (Source: [khaledalshamaa](https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider){target="_blank"})<br>
-::::
+
+<h4>2. NDVI Slider (Source: [khaledalshamaa](https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider){target="_blank"})</h4>
 
 ![](images/5-gee_ndvi.png){width=100% fig-align="center"}
 
