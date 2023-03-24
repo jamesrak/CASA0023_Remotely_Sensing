@@ -11,7 +11,6 @@ There are two types of sensor which are active and passive sensors.
 Source:[Fernanda Lopez Ornelas, 2016](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover){target="_blank"}                    
 
 <h4>1. Active Sensor</h4>
-
 + <u>Summary</u>: Active sensors emit their own energy source for illumination and measure the reflection or scattering of this energy by the targets on the Earth's surface. The examples of active sensors include radar, X-ray, LiDAR
 
 + <u>Pros</u>: They can penetrate to certain materials like cloud, vegetation and soil, which will enable subsurface imaging. Moreover, They are independent to solar illumination, so it is allowing for day and night data collection.
@@ -20,8 +19,6 @@ Source:[Fernanda Lopez Ornelas, 2016](https://www.researchgate.net/publication/3
 
 
 <h4>2. Passive Sensor</h4>
-
-
 + <u>Summary</u>: Passive sensors detect the natural energy emitted or reflected by the Earth's surface.It do not emit anything, like active sensors. The examples of passive sensors include human eye, camera, satellite sensor
 
 + <u>Pros</u>: These sensors provide information on a wide range of spectral bands, allowing for detailed analysis of vegetation, water quality, and atmospheric conditions. Furthermore, high spatial and spectral resolution data can be provided. 
