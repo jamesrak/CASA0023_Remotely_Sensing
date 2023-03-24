@@ -32,7 +32,7 @@ Source:[Fernanda Lopez Ornelas, 2016](https://www.researchgate.net/publication/3
 ### Remotely sensed data
 
 -   Most common data format is raster. Common file types include BIL, BSQ, BIP and GeoTIFF.
--   Resolutions of data are considered in many aspects, including spatial, spectral, temporal and radiometric. The example of resolutions is provided below:
+-   Resolutions of data are considered in many aspects, including spatial, spectral, temporal and radiometric. The explanation and examples of each resolution are following:
 
 Resolution|Description|Example|
 -----------|:---------------------------|:----------------
