@@ -2,21 +2,45 @@
 
 ## Summary
 
-<h3>Sensor</h3>
+### Sensor
 
-There are two types of sensor which are active and passive sensors. Active sensors, such as Human eye, camera, satellite sensor, Use energy that is available and usually detect reflected energy from the sun. On the other hand, active sensors, such as Radar, X-ray and LiDAR, have an energy source for illumination and actively emit electromagnetic waves and then wait to receive.
+There are two types of sensor which are active and passive sensors.
 
-<h3>Remotely sensed data</h3>
+![](images/1-sensor.jpg)
+
+Source:[Fernanda Lopez Ornelas, 2016](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover){target="_blank"}                    
+
+<h4>1. Active Sensor</h4>
+
++ <u>Summary</u>: Active sensors emit their own energy source for illumination and measure the reflection or scattering of this energy by the targets on the Earth's surface. The examples of active sensors include radar, X-ray, LiDAR
+
++ <u>Pros</u>: They can penetrate to certain materials like cloud, vegetation and soil, which will enable subsurface imaging. Moreover, They are independent to solar illumination, so it is allowing for day and night data collection.
+
++ <u>Cons</u>: The main drawback is its sensitive to the surface roughness and orientation of the target. It also requires more power to operate, which will limit the sensor's lifetime.
+
+
+<h4>2. Passive Sensor</h4>
+
+
++ <u>Summary</u>: Passive sensors detect the natural energy emitted or reflected by the Earth's surface.It do not emit anything, like active sensors. The examples of passive sensors include human eye, camera, satellite sensor
+
++ <u>Pros</u>: These sensors provide information on a wide range of spectral bands, allowing for detailed analysis of vegetation, water quality, and atmospheric conditions. Furthermore, high spatial and spectral resolution data can be provided. 
+
++ <u>Cons</u>: The performance of passive sensors can be affected by solar illumination and atmospheric conditions. Therefore, if the sky is not clear, it could be the problems to this kind of sensor. Also, it cannot penetrate through clouds, smoke, or vegetation like active sensors.
+
+
+### Remotely sensed data
 
 -   Most common data format is raster. Common file types include BIL, BSQ, BIP and GeoTIFF.
 -   Resolutions of data are considered in many aspects, including spatial, spectral, temporal and radiometric. The example of resolutions is provided below:
 
-| Resolution  | Example                                                            |
-|-----------------------|:------------------------------------------------|
-| Spatial     | 30 m                                                               |
-| Spectral    | Band 4 - Red, Band 5 - Near Infrared (NIR), Band 6 - SWIR 1        |
-| Temporal    | daily                                                              |
-| Radiometric | an 8 bit sensor has values between 0 and 255 (256 possible values) |
+Resolution|Description|Example|
+-----------|:---------------------------|:----------------
+| Spatial|the level of detail or clarity of an image, defined by the size of the smallest object or feature that can be distinguished on the ground.| 30 m
+| Spectral|the number and width of the spectral bands that are captured by a sensor.| Band 4 - Red, Band 5 - Near Infrared (NIR), Band 6 - SWIR 1
+| Temporal|the frequency at which images or data are collected over a given area.| daily
+| Radiometric|the sensitivity of a sensor to differences in the amount of energy reflected or emitted by a target.| an 8 bit sensor has values between 0 and 255 (256 possible values)
+
 
 ## Applications
 

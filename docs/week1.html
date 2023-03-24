@@ -179,7 +179,11 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">1.1</span>  Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">1.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#sensor" id="toc-sensor" class="nav-link" data-scroll-target="#sensor"><span class="toc-section-number">1.1.1</span>  Sensor</a></li>
+  <li><a href="#remotely-sensed-data" id="toc-remotely-sensed-data" class="nav-link" data-scroll-target="#remotely-sensed-data"><span class="toc-section-number">1.1.2</span>  Remotely sensed data</a></li>
+  </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">1.2</span>  Applications</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">1.3</span>  Reflection</a></li>
   </ul>
@@ -206,47 +210,75 @@ div.csl-indent {
 
 <section id="summary" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
-<h3 class="anchored">
-Sensor
-</h3>
-<p>There are two types of sensor which are active and passive sensors. Active sensors, such as Human eye, camera, satellite sensor, Use energy that is available and usually detect reflected energy from the sun. On the other hand, active sensors, such as Radar, X-ray and LiDAR, have an energy source for illumination and actively emit electromagnetic waves and then wait to receive.</p>
-<h3 class="anchored">
-Remotely sensed data
-</h3>
+<section id="sensor" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="sensor"><span class="header-section-number">1.1.1</span> Sensor</h3>
+<p>There are two types of sensor which are active and passive sensors.</p>
+<p><img src="images/1-sensor.jpg" class="img-fluid"></p>
+<p>Source:<a href="https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover" target="_blank">Fernanda Lopez Ornelas, 2016</a></p>
+<h4 class="anchored">
+<ol type="1">
+<li>Active Sensor
+</li></ol></h4>
+
+<ul>
+<li><p><u>Summary</u>: Active sensors emit their own energy source for illumination and measure the reflection or scattering of this energy by the targets on the Earth’s surface. The examples of active sensors include radar, X-ray, LiDAR</p></li>
+<li><p><u>Pros</u>: They can penetrate to certain materials like cloud, vegetation and soil, which will enable subsurface imaging. Moreover, They are independent to solar illumination, so it is allowing for day and night data collection.</p></li>
+<li><p><u>Cons</u>: The main drawback is its sensitive to the surface roughness and orientation of the target. It also requires more power to operate, which will limit the sensor’s lifetime.</p></li>
+</ul>
+<h4 class="anchored">
+<ol start="2" type="1">
+<li>Passive Sensor
+</li></ol></h4>
+
+<ul>
+<li><p><u>Summary</u>: Passive sensors detect the natural energy emitted or reflected by the Earth’s surface.It do not emit anything, like active sensors. The examples of passive sensors include human eye, camera, satellite sensor</p></li>
+<li><p><u>Pros</u>: These sensors provide information on a wide range of spectral bands, allowing for detailed analysis of vegetation, water quality, and atmospheric conditions. Furthermore, high spatial and spectral resolution data can be provided.</p></li>
+<li><p><u>Cons</u>: The performance of passive sensors can be affected by solar illumination and atmospheric conditions. Therefore, if the sky is not clear, it could be the problems to this kind of sensor. Also, it cannot penetrate through clouds, smoke, or vegetation like active sensors.</p></li>
+</ul>
+</section>
+<section id="remotely-sensed-data" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="remotely-sensed-data"><span class="header-section-number">1.1.2</span> Remotely sensed data</h3>
 <ul>
 <li>Most common data format is raster. Common file types include BIL, BSQ, BIP and GeoTIFF.</li>
 <li>Resolutions of data are considered in many aspects, including spatial, spectral, temporal and radiometric. The example of resolutions is provided below:</li>
 </ul>
 <table class="table">
 <colgroup>
-<col style="width: 31%">
-<col style="width: 68%">
+<col style="width: 19%">
+<col style="width: 50%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Resolution</th>
+<th style="text-align: left;">Description</th>
 <th style="text-align: left;">Example</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Spatial</td>
+<td style="text-align: left;">the level of detail or clarity of an image, defined by the size of the smallest object or feature that can be distinguished on the ground.</td>
 <td style="text-align: left;">30 m</td>
 </tr>
 <tr class="even">
 <td>Spectral</td>
+<td style="text-align: left;">the number and width of the spectral bands that are captured by a sensor.</td>
 <td style="text-align: left;">Band 4 - Red, Band 5 - Near Infrared (NIR), Band 6 - SWIR 1</td>
 </tr>
 <tr class="odd">
 <td>Temporal</td>
+<td style="text-align: left;">the frequency at which images or data are collected over a given area.</td>
 <td style="text-align: left;">daily</td>
 </tr>
 <tr class="even">
 <td>Radiometric</td>
+<td style="text-align: left;">the sensitivity of a sensor to differences in the amount of energy reflected or emitted by a target.</td>
 <td style="text-align: left;">an 8 bit sensor has values between 0 and 255 (256 possible values)</td>
 </tr>
 </tbody>
 </table>
+</section>
 </section>
 <section id="applications" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
@@ -277,7 +309,7 @@ Remotely sensed data
 <h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
 <ul>
 <li><p><strong>Content</strong>: As I used to work in the feed trading company before, remote sensing plays an important role of estimating crop supply. To identify the location of all crops such as corn and soybean in the country, we need to depend on remote sensing data to quickly estimate the supply of each crop. Otherwise, human are needed to survey in every fields, which is quite exhaustive. Furthermore, it is good to see the availability of data with different resolution, so we can choose and use it with a proper task.</p></li>
-<li><p><strong>Applications</strong>: The selected research looks very useful and be likely to be able to apply for a better agricultural use. However, there are so many methods mentioned in this research, such as Ordinary kriging (OK) that I have not learned before. I expect that after studying this course for a while, I can have a better understanding of the remote sensing research more.</p></li>
+<li><p><strong>Applications</strong>: The selected research looks very useful and be likely to be able to apply for a better agricultural use. However, there are so many methods mentioned in this research, such as Ordinary kriging (OK) that I have not learned before. I expect that after studying this course for a while and reading more researches, I can have a better understanding of the remote sensing research more.</p></li>
 </ul>
 
 
