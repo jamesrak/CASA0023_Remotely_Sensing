@@ -36,12 +36,12 @@ xaringanExtra::embed_xaringan(
 
 ## Radar VS. Optical: Optimising satellite use in land cover classification
 
-<https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/>
+Additional reading: I found the interesting article comparing the results of using radar and optical images in land cover classification.  [Source: Julia Ramsauer 2020](https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/){target="_blank"}  
 
 ![](images/volcano-image_big.jpg) An optical image of Kliuchevskoi volcano on the left, with a radar image on the right (Image credit: Michigan Tech Volcanology, Image Cropped)
 
 ![](images/s1-maps-paper.png)
 
-Comparison of land cover classification results using a temporal average (left) and time series (right) of a combination of optical and radar images (Image Credit: Lopes et al., 2020)
+Comparison of land cover classification results using a temporal average (left) and time series (right) of a combination of optical and radar images (Image Credit: [Lopes et al., 2020](https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/){target="_blank"}  )
 
 The categorization accuracy was tested using the so-called Kappa-coefficient. According to their findings, classifications based on radar time series were more accurate than those based on optical time series. However, more precise findings may not always result in better maps. Therefore, while examining maps, the possibility of inaccuracies caused by the similarity of categories in optical or radar data should be considered.
