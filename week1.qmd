@@ -20,8 +20,28 @@ There are two types of sensor which are active and passive sensors. Active senso
 
 ## Applications
 
-There are many useful applications of remote sensing. Examples of agricultural applications include productivity increasing. This could be done by providing inputs, given from remote sensing data, for improvement of soil fertility. The other example is to identify culturable wastelands or marginal lands. The benefit of this application is to increase agricultural area [@navalgund_remote_2007]. Without remote sensing data, it will be difficult to retrieve data covering every area in the country.
+There are many useful applications of remote sensing. Examples of agricultural applications include productivity increasing. This could be done by providing inputs, given from remote sensing data, for improvement of soil fertility. The other example is to identify culturable wastelands or marginal lands. The benefit of this application is to increase agricultural area [@navalgund_remote_2007]. Without remote sensing data, it will be difficult to retrieve data covering every area in the country. 
+
+Next, let's look into more detail of some research using remote sensing.
+
+
+<h4>1. Soil fertility assessment for optimal agricultural use using remote sensing and GIS technologies
+[@abdelrahman_soil_2021]</h4>
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=FALSE, fig.cap= "Source: [AbdelRahman, Hegab, and Yossif 2021](https://link.springer.com/article/10.1007/s12518-021-00376-1)"}
+knitr::include_graphics('images/1-soil_fertility.png') 
+```
+
++ <u>Summary</u>: This research aims to assess soil fertility for optimal agricultural use in Egypt using remote sensing. The study area is located in the north region of the west desert. The goal is to determine the suitable areas for different crops and irrigation systems. The results show that the high suitable areas for barley and wheat were about 54.7%, while for corn and beans were about 44.9%. To reduce water losses, the study recommends improving the delivery and efficiency of irrigation systems and choosing appropriate irrigation methods.
+
++ <u>Methodology</u>: The researcher combined Sentinel-1 and DEM derived for conducting landform and soil mapping. Some indices related to soil were extracted from remote sensing data, such as soil fertility index (SFI) and soil evaluation factor (SEF). Ordinary kriging (OK) method was performed to predict unmeasured locations by incorporating spatial correlations. Soil capability was assessed by categorising into 3 classes from irrigation capability index.
+ 
++ <u>Comments</u>: This use case is quite impressive that they tried to use remote sensing data to help with soil assessment. It can be very tough if we do not have remote sensing data. However, this research mentioned that "Collected soil samples were analyzed according to USDA (2014). Soil taxonomy was produced using USDA (2014)." I wondered if the assessment of crops in Egypt can follow every guideline provided by the United States. The species of crops may different between country and have to adapt for some implementation.
+
+
+
 
 ## Reflection
 
-As I used to work in the feed trading company before, remote sensing plays an important role of estimating crop supply. To identify the location of all crops such as corn and soybean in the country, we need to depend on remote sensing data to quickly estimate the supply of each crop. Otherwise, human are needed to survey in every fields, which is quite exhaustive. Furthermore, it is good to see the availability of data with different resolution, so we can choose and use it with a proper task.
++ **Content**: As I used to work in the feed trading company before, remote sensing plays an important role of estimating crop supply. To identify the location of all crops such as corn and soybean in the country, we need to depend on remote sensing data to quickly estimate the supply of each crop. Otherwise, human are needed to survey in every fields, which is quite exhaustive. Furthermore, it is good to see the availability of data with different resolution, so we can choose and use it with a proper task.
+
++ **Applications**: The selected research looks very useful and be likely to be able to apply for a better agricultural use. However, there are so many methods mentioned in this research, such as Ordinary kriging (OK) that I have not learned before. I expect that after studying this course for a while and reading more researches, I can have a better understanding of the remote sensing research more.
