@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -61,6 +80,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -133,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></a>
+  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -160,7 +180,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia"><span class="toc-section-number">7.1.1</span>  Object based image analysis (OBIA)</a></li>
+  <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis"><span class="toc-section-number">7.1.2</span>  Sub pixel analysis</a></li>
+  <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="toc-section-number">7.1.3</span>  Accuracy Assessment</a></li>
+  </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">7.2</span>  Applications</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">7.3</span>  Reflection</a></li>
   </ul>
@@ -187,14 +212,174 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<p>In this week, we are going to look at segmentation and classification tasks in remote sensing which are object based image analysis and sub pixel analysis. Moreover, all the accuracy assessments will be reviewed.</p>
+<section id="object-based-image-analysis-obia" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="object-based-image-analysis-obia"><span class="header-section-number">7.1.1</span> Object based image analysis (OBIA)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/7-OBIA-classification1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<div style="text-align: center;">
+<p><br>Source: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/" target="_blank">GISGeography</a></p>
+</div>
+<ul>
+<li><p><u>Overview</u>: Object-Based Image Analysis (OBIA) is an approach to classify groups of pixels or image objects that share similar characteristics, such as spectral, spatial, or textural properties. The main tasks in OBIA consist of segmentation and classification.</p></li>
+<li><p><u>Things to consider</u>: In order to grouping pixels into superpixels, we consider based on the similarity (homogeneity) or difference (heterogeneity) of the cells.</p></li>
+<li><p><u>Pros</u>: It better representation of complex spatial patterns, and the ability to incorporate contextual information. Moreover, an classification accuracy may be increased in compared with performing pixel-based classification.</p></li>
+<li><p><u>Cons</u>: It can also be computationally intensive and may require more complex algorithms and expert knowledge to achieve optimal results</p></li>
+<li><p><u>Segmentation Algorithms</u>:</p>
+<ul>
+<li>Simple Linear Iterative Clustering (SLIC) Algorithm <span class="citation" data-cites="achanta_slic_2010">(<a href="references.html#ref-achanta_slic_2010" role="doc-biblioref">Achanta et al. 2010</a>)</span>
+<ul>
+<li>It is mainly used for superpixel segmentation by clustering pixels based on two considerations which are
+<ol type="1">
+<li>homogenity of colours: color similarity</li>
+<li>closeness to centre: spatial distance from point to centre of pixel</li>
+</ol></li>
+<li>The algorithm is summarised as follow: <img src="images/7-slic.png" class="img-fluid" style="width:80.0%" data-fig-align="center"></li>
+</ul></li>
+</ul></li>
+</ul>
+<div style="text-align: center;">
+<p><br>Source: <a href="https://infoscience.epfl.ch/record/149300" target="_blank">Achanta et al.&nbsp;2010</a></p>
+</div>
+</section>
+<section id="sub-pixel-analysis" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">7.1.2</span> Sub pixel analysis</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/7-sub_pixel_analysis.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<div style="text-align: center;">
+<p><br>Source: <a href="https://www.tandfonline.com/doi/pdf/10.1080/01431161.2017.1346403?needAccess=true&amp;" target="_blank">MacLachlan et al.&nbsp;2017</a></p>
+</div>
+<ul>
+<li><p><u>Overview</u>: Sub pixel analysis or spectral mixture analysis (SMA) is used to analyze and interpret the spectral signatures of mixed pixels in multispectral for dealing with images that have lower resolution than the features of interest on the ground. Since a single pixel may contain more than one type of land cover, object, or feature; the amount of sub-pixels for each class is calculated, before they are spatially allocated. SMA aims to estimate the abundance or proportion of each component (endmembers).</p></li>
+<li><p><u>Things to consider</u>:</p>
+<ul>
+<li>Pixel purity : Consider if a pixel contains a single land cover type or material or mixed signatures</li>
+<li>Number of Endmembers: the number of endmembers should represent the actual number of distinct land cover types or materials in the study area. Too few endmembers may lead to under-representation of the true composition of mixed pixels, while too many endmembers can result in overfitting and increased complexity. In urban areas, the Vegetation-Impervious surface-Soil (V-I-S) model is usually used.</li>
+</ul></li>
+<li><p><u>Pros</u>: Sub pixel analysis can improve the classification accuracy, especially for low-resolution or noisy images. It also may enhance the detection of subtle changes in land cover or other features over time, which may not be noticeable at the native image resolution.</p></li>
+<li><p><u>Cons</u>: Sub-pixel analysis relies on the assumption that the spectral signature of a mixed pixel is a linear combination of the spectral signatures of its constituent components. This assumption may not always hold, as interactions between materials and land cover types can cause non-linear spectral mixing, which can complicate the analysis and lead to inaccuracies. Moreover, the accuracy of sub-pixel analysis is heavily dependent on the quality and representativeness of the endmembers.</p></li>
+<li><p><u>Spectral mixture analysis steps</u>:</p>
+<ol type="1">
+<li>Select endmembers</li>
+<li>estimate abundance of each endmember within the mixed pixels by solving a linear system of equations</li>
+</ol>
+<p>The outputs will be the fraction of each class within one pixel.</p></li>
+</ul>
+</section>
+<section id="accuracy-assessment" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">7.1.3</span> Accuracy Assessment</h3>
+<p>There are many metrics to evaluate the performance of the classification models.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/7-matrix.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<div style="text-align: center;">
+<p><br>Source: <a href="https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf" target="_blank">Barsi et al.&nbsp;2018</a></p>
+</div>
+<p>Some of the most widely used metrics include:</p>
+<table class="table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 33%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metrics</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Producer’s accuracy (PA)</td>
+<td style="text-align: left;"><span class="math display">\[PA= \frac{TP}{TP+FN}\]</span></td>
+<td style="text-align: left;">It is the same as <strong>recall</strong> or true positive rate or sensitivity. <br>It refers to the number of correctly classified pixels for a given class divided by the total number of reference pixels for that class</td>
+</tr>
+<tr class="even">
+<td>User’s Accuracy (UA)</td>
+<td style="text-align: left;"><span class="math display">\[PA= \frac{TP}{TP+FP}\]</span></td>
+<td style="text-align: left;">It is the same as <strong>precision</strong> or positive predictive value. <br>It refers to the number of correctly classified pixels for a given class divided by the total number of classified pixels for that class</td>
+</tr>
+<tr class="odd">
+<td>The overall accuracy (OA)</td>
+<td style="text-align: left;"><span class="math display">\[PA= \frac{TP+TN}{TP+FP+FN+TN}\]</span></td>
+<td style="text-align: left;">The number of correctly classified pixels divide by the total number of pixels</td>
+</tr>
+<tr class="even">
+<td>Kappa Coefficient</td>
+<td style="text-align: left;"><span class="math display">\[\kappa = \frac{P_o - P_e}{1 - P_e}\]</span></td>
+<td style="text-align: left;">It expresses the accuracy of an image compared to the results by chance. It ranges from 0 to 1. Note that po is the proportion of cases correctly classified (accuracy) and Pe expected cases correctly classified by chance.</td>
+</tr>
+<tr class="odd">
+<td>F1-Score</td>
+<td style="text-align: left;"><span class="math display">\[F1 = \frac{2*Precision*Recall}{Precision+Recall}\]</span></td>
+<td style="text-align: left;">The F1-Score (or F Measure) combines both recall (Producer accuracy) and Precision (User accuracy)</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="applications" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
+<p>In this section, we will give examples of object based image analysis projects in remote sensing with an analysis.</p>
+<h4 class="anchored">
+<ol type="1">
+<li>Monitoring land use changes associated with urbanization: An object based image analysis approach <span class="citation" data-cites="samal_monitoring_2015">(<a href="references.html#ref-samal_monitoring_2015" role="doc-biblioref">Samal and Gedam 2015</a>)</span>
+</li></ol></h4>
+
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/7-lulc.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.tandfonline.com/doi/abs/10.5721/EuJRS20154806">Samal and Gedam 2015</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/7-lulc-2.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.tandfonline.com/doi/abs/10.5721/EuJRS20154806">Samal and Gedam 2015</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p><u>Summary</u>: This study aims to monitor land use/land cover (LULC) changes due to urbanization in a rapidly changing river basin in India. The researchers analyzed past changes and predicted possible consequences within the river basin’s natural boundaries. Multi-temporal images from Landsat and Indian Remote Sensing (IRS) satellites from 1992 to 2009, as well as a digital elevation model, were used to generate historical and current LULC patterns in the basin. The object-based image analysis technique was employed for precise classification of multi-temporal images, followed by GIS-based change detection studies. The results show that the built-up area increased significantly, adding 288 km² between 1992 and 2009. This increase in built-up area is attributed to a decrease in wastelands and agricultural land. This research also achieved an overall accuracy of 92.7% and kappa index of agreement of 0.91, while they got the producer accuracy of 90% except forest class.</p></li>
+<li><p><u>Methodology</u>: The researcher used an object-based image classification to classify land use by using K-nearest-neighbour into 5 classes; which are agricultural land, built up area, forest cover, wastelands and water bodies, and identified changes from 1992 to 2009. Image segmentation was performed to divides large heterogeneous image into a finite number of homogenous groups before classifying based on their different spectral and textural characteristics, including red, NIR, green and NDVI bands. Metrics used in this research were an overall accuracy, kappa index and producer’s accuracy</p></li>
+<li><p><u>Comments</u>: OBIA is an appropriate method to use in this project since it could help to capture the spatial extent of classes like forests or water bodies and then result in improvement of classification performance. The class that got the lowest accuracy was forest, since the models were confused with wetland and agriculture area. Further improvement of this research may include applying more complex models, such as object-based convolutional neural networks (OCNN) <span class="citation" data-cites="zhang_object-based_2018">(<a href="references.html#ref-zhang_object-based_2018" role="doc-biblioref">Zhang et al. 2018</a>)</span>. There are many researches that found that deep learning models outperform traditional machine learning models like K-NN in classification tasks.</p></li>
+</ul>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<ul>
+<li><p><strong>Content</strong>: I am very interesting to study the content of this week, since some of my previous work was to conduct crop classification task using random forest. However, I found the issue that the model did not classify the same class for every pixels in the field. I think that object based image analysis would solve this issue. However, I tried applying SNIC algorithm and found that it was not correctly segmented every fields. It is possible that data used in my research was a low-resolution imagery and it was hard to conduct perfect segmentation. Nevertheless, the outcome was better than pixel-based classification.</p></li>
+<li><p><strong>Applications</strong>: Land use changes is the other interesting topics that I would like to research more, since I had never conducted this research. The accuracy of this research is also very high (90%), so it means that it is possible that our research about this topic will be succeeded. Moreover, I would like to know more about what kind of complex urban land use which complex model such as object-based CNN (OCNN) can perform much better than other common used models e.g.&nbsp;random forest. It could be one of my list of future researches.</p></li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-achanta_slic_2010" class="csl-entry" role="doc-biblioentry">
+Achanta, Radhakrishna, Appu Shaji, Kevin Smith, Aurélien Lucchi, Pascal Fua, and Sabine Süsstrunk, eds. 2010. <em><span>SLIC</span> <span>Superpixels</span></em>. EPFL.
+</div>
+<div id="ref-samal_monitoring_2015" class="csl-entry" role="doc-biblioentry">
+Samal, Dipak R., and Shirish S. Gedam. 2015. <span>“Monitoring Land Use Changes Associated with Urbanization: <span>An</span> Object Based Image Analysis Approach.”</span> <em>European Journal of Remote Sensing</em> 48 (1): 85–99. <a href="https://doi.org/10.5721/EuJRS20154806">https://doi.org/10.5721/EuJRS20154806</a>.
+</div>
+<div id="ref-zhang_object-based_2018" class="csl-entry" role="doc-biblioentry">
+Zhang, Ce, Isabel Sargent, Xin Pan, Huapeng Li, Andy Gardiner, Jonathon Hare, and Peter M. Atkinson. 2018. <span>“An Object-Based Convolutional Neural Network (<span>OCNN</span>) for Urban Land Use Classification.”</span> <em>Remote Sensing of Environment</em> 216 (October): 57–70. <a href="https://doi.org/10.1016/j.rse.2018.06.034">https://doi.org/10.1016/j.rse.2018.06.034</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -299,7 +484,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week6.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

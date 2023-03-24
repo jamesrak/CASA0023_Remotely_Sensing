@@ -5,7 +5,7 @@ project:
 book:
   title: "CASA0023 Remotely Sensing Cities and Environments"
   author: "James Nutthaphol Rakratchatakul"
-  date: "1/19/2023"
+  date: "3/24/2023"
   navbar:
     logo: images/casa_logo.jpg
     collapse: true
