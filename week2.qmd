@@ -14,9 +14,9 @@ xaringanExtra::embed_xaringan(
 
 ## Synthetic Aperture Radar (SAR)
 
-- Using radar over optical remote sensing
+-   Using radar over optical remote sensing
 
-- **Advantanges**
+-   **Advantanges**
 
 > (+) Ability to capture data day or night
 
@@ -24,25 +24,21 @@ xaringanExtra::embed_xaringan(
 
 > (+) Weather independence by selecting proper frequency range
 
-> (+) Penetration through the vegetation
-canopy and the soil
+> (+) Penetration through the vegetation canopy and the soil
 
-- (+/-) Sensitivity to structure
+-   (+/-) Sensitivity to structure
 
-- **Disadvantanges**
+-   **Disadvantanges**
 
 > (-) Information content is different than optical and sometimes difficult to interpret
 
-- Variable resolution is 1 to 100 m
-
-
+-   Variable resolution is 1 to 100 m
 
 ## Radar VS. Optical: Optimising satellite use in land cover classification
-[https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/](https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/)
 
-![](images/volcano-image_big.jpg)
-An optical image of Kliuchevskoi volcano on the left, with a radar image on the right (Image credit: Michigan Tech Volcanology, Image Cropped)
+<https://ecologyforthemasses.com/2020/05/27/radar-vs-optical-optimising-satellite-use-in-land-cover-classification/>
 
+![](images/volcano-image_big.jpg) An optical image of Kliuchevskoi volcano on the left, with a radar image on the right (Image credit: Michigan Tech Volcanology, Image Cropped)
 
 ![](images/s1-maps-paper.png)
 

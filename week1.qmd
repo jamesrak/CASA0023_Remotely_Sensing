@@ -1,22 +1,27 @@
 # An Introduction to Remote Sensing
 
 ## Summary
+
 <h3>Sensor</h3>
-There are two types of sensor which are active and passive sensors. Active sensors, such as Human eye, camera, satellite sensor, Use energy that is available and usually detect reflected energy from the sun. On the other hand, active sensors, such as Radar, X-ray and LiDAR,  have an energy source for illumination and actively emit electromagnetic waves and then wait to receive.
+
+There are two types of sensor which are active and passive sensors. Active sensors, such as Human eye, camera, satellite sensor, Use energy that is available and usually detect reflected energy from the sun. On the other hand, active sensors, such as Radar, X-ray and LiDAR, have an energy source for illumination and actively emit electromagnetic waves and then wait to receive.
 
 <h3>Remotely sensed data</h3>
-- Most common data format is raster. Common file types include BIL, BSQ, BIP and GeoTIFF.
-- Resolutions of data are considered in many aspects, including spatial, spectral, temporal and radiometric. The example of resolutions is provided below:
 
-Resolution|Example
-----|:--------
-Spatial| 30 m
-Spectral| Band 4 - Red, Band 5 - Near Infrared (NIR), Band 6 - SWIR 1
-Temporal| daily
-Radiometric| an 8 bit sensor has values between 0 and 255 (256 possible values)
+-   Most common data format is raster. Common file types include BIL, BSQ, BIP and GeoTIFF.
+-   Resolutions of data are considered in many aspects, including spatial, spectral, temporal and radiometric. The example of resolutions is provided below:
+
+| Resolution  | Example                                                            |
+|-----------------------|:------------------------------------------------|
+| Spatial     | 30 m                                                               |
+| Spectral    | Band 4 - Red, Band 5 - Near Infrared (NIR), Band 6 - SWIR 1        |
+| Temporal    | daily                                                              |
+| Radiometric | an 8 bit sensor has values between 0 and 255 (256 possible values) |
 
 ## Applications
+
 There are many useful applications of remote sensing. Examples of agricultural applications include productivity increasing. This could be done by providing inputs, given from remote sensing data, for improvement of soil fertility. The other example is to identify culturable wastelands or marginal lands. The benefit of this application is to increase agricultural area [@navalgund_remote_2007]. Without remote sensing data, it will be difficult to retrieve data covering every area in the country.
 
 ## Reflection
+
 As I used to work in the feed trading company before, remote sensing plays an important role of estimating crop supply. To identify the location of all crops such as corn and soybean in the country, we need to depend on remote sensing data to quickly estimate the supply of each crop. Otherwise, human are needed to survey in every fields, which is quite exhaustive. Furthermore, it is good to see the availability of data with different resolution, so we can choose and use it with a proper task.
