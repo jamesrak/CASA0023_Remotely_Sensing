@@ -115,3 +115,10 @@ knitr::include_graphics('images/6-building_assessment.jpg')
 
 
 ## Reflection
++ **Content**: 
+  + There are many machine learning models taught in this week. As a data scientist, I have already used many models in many projects before. However, I sometimes forgot some implementation steps, since we have libraries, such as sklearn in python. The use of model is just typing one line of code and the magic happens. So, it is good to review all of the concepts of each model again. Moreover, knowing pros and cons of each model will help improve the quality of machine learning project design. Sometimes, I focused on only accuracy too much and forget to think about interpretability of models. 
+  + In term of concepts, I found that ensembling and bagging techniques in random forest model are quite interesting, since it could be seen that the winner of many machine learning competitions also use these techniques. I wonder if we can use the concept of ensembling with many SVM models and how much the performance will increase resulting from adding this technique. I expect that it will slightly increase the performance, however, it will take much longer time for computation. There was also one research to support my idea [@claesen_ensemblesvm_2014].
+
++ **Applications**: 
+  + Currently, I am interested in researching about damage building assessment from satellite imagery. Therefore, this research looks interesting to me, since it also conducted building classification. The workflow in this project also involved many techniques before achieving the promising accuracy.
+  + For specific technique, I used SVM as a classification model for many projects, but I have not used one-class svm (OC-SVM) for identifying outliers, since there are also many techniques for excluding outliers, such as using mean and standard deviation method  or isolation forest [@liu_isolation_2008]. So, it is good to explore the performance of OC-SVM compared to other methods.
